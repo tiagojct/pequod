@@ -6,12 +6,14 @@
 
 SHELL := /bin/bash
 
-.PHONY: specimen cvd clean help
+.PHONY: specimen cvd r-data r-check clean help
 
 help:
 	@echo "Pequod build targets:"
 	@echo "  make specimen   Regenerate specimen/specimen.pdf from specimen.typ"
 	@echo "  make cvd        Run the CVD simulation on pequod.json"
+	@echo "  make r-data     Regenerate r/R/palettes-data.R from pequod.json"
+	@echo "  make r-check    R CMD check the R package (requires R + devtools)"
 	@echo "  make clean      Remove generated artefacts"
 
 specimen: specimen/specimen.pdf
@@ -22,5 +24,13 @@ specimen/specimen.pdf: specimen/specimen.typ
 cvd:
 	python3 scripts/cvd_check.py
 
+r-data:
+	cd r && Rscript data-raw/generate_palettes.R
+
+r-check:
+	cd r && R CMD build . && R CMD check pequod_*.tar.gz
+
 clean:
 	rm -f specimen/specimen.pdf
+	rm -f r/pequod_*.tar.gz
+	rm -rf r/pequod.Rcheck

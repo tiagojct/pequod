@@ -1,0 +1,18 @@
+# Generated manually for the initial scaffold.
+# After running roxygen2::roxygenise(), this file will regenerate automatically.
+
+export(palette_pequod)
+export(pequod_crew)
+export(pequod_crew_dark)
+export(pequod_crew_light)
+export(pequod_log)
+export(pequod_preview)
+export(scale_color_pequod_c)
+export(scale_color_pequod_d)
+export(scale_colour_pequod_c)
+export(scale_colour_pequod_d)
+export(scale_fill_pequod_c)
+export(scale_fill_pequod_d)
+
+importFrom(grDevices, colorRampPalette)
+importFrom(graphics, axis, image, par, rect, text)

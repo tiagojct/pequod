@@ -1,0 +1,31 @@
+Package: pequod
+Type: Package
+Title: Pequod Palette for R
+Version: 0.1.0
+Authors@R: person("Tiago", "Jacinto",
+                  email = "tiagojacinto@med.up.pt",
+                  role = c("aut", "cre"),
+                  comment = c(ORCID = "0000-0002-7897-1101"))
+Description: The Pequod colour palette, named after the whaler in
+    Herman Melville's Moby-Dick. Provides the full Log base scale
+    from warm paper (Log 50) to deep ink (Log 950), eight crew
+    accent hues with light and dark variants, and 'ggplot2' scales
+    for discrete and continuous mapping. Designed for long-form
+    reading and code, with low saturation and a consistent earth-
+    pigment register.
+License: MIT + file LICENSE
+URL: https://tiagojct.eu/projects/pequod/,
+    https://github.com/tiagojct/pequod
+BugReports: https://github.com/tiagojct/pequod/issues
+Encoding: UTF-8
+Depends:
+    R (>= 4.0.0)
+Imports:
+    ggplot2 (>= 3.3.0),
+    grDevices,
+    graphics
+Suggests:
+    testthat (>= 3.0.0),
+    jsonlite
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2

@@ -40,6 +40,13 @@ pequod/
 │   ├── Pequod-color-theme.json            # VS Code (dark)
 │   ├── Pequod-light-color-theme.json      # VS Code (light)
 │   └── Pequod.zed.json                    # Zed (dark + light in one file)
+├── r/                           # R package — install with
+│   │                            #   remotes::install_github(
+│   │                            #     "tiagojct/pequod", subdir = "r")
+│   ├── DESCRIPTION              # see r/README.md for full R docs
+│   ├── R/                       # palette constants, ggplot2 scales
+│   ├── tests/
+│   └── data-raw/                # generator: re-reads ../pequod.json
 ├── specimen/
 │   ├── specimen.typ             # single-page specimen source (Typst)
 │   └── specimen.pdf             # rendered output — swatches + samples
@@ -49,7 +56,7 @@ pequod/
 ├── README.md
 ├── CHANGELOG.md
 ├── LICENSE-CC-BY-4.0            # palette tokens and docs
-└── LICENSE-MIT                  # theme files and scripts
+└── LICENSE-MIT                  # theme files, scripts, R package
 ```
 
 ## Install
@@ -96,6 +103,31 @@ Zed reads user themes directly from disk:
 3. Apply the *Pequod* preset.
 
 An iTerm2 light preset is on the roadmap.
+
+### R
+
+The R package lives in [`r/`](r/) and is installed as a subdirectory:
+
+```r
+# install.packages("remotes")
+remotes::install_github("tiagojct/pequod", subdir = "r")
+
+library(pequod)
+palette_pequod("log")              # 12-step Log scale
+palette_pequod("crew", n = 5)      # first five crew accents
+pequod_preview("crew")             # quick base-R preview
+```
+
+ggplot2 scales are provided too:
+
+```r
+library(ggplot2)
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_point(size = 3) +
+  scale_color_pequod_d(palette = "crew")
+```
+
+Full usage in [`r/README.md`](r/README.md).
 
 ## The tokens
 

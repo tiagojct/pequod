@@ -33,9 +33,28 @@ First public release.
   accents (light and dark variants), a body-text sample, and a dark
   code sample with every token coloured by its crew role. Rendered
   with Typst against system-installed Geist / Geist Mono.
-- `Makefile` with `specimen`, `cvd`, and `clean` targets.
+- `r/` — an installable R package. Exposes `pequod_log`,
+  `pequod_crew_light`, `pequod_crew_dark`, `pequod_crew`, a general
+  `palette_pequod()` helper (discrete + continuous, six named
+  palettes), ggplot2 scales `scale_color_pequod_d/c` and
+  `scale_fill_pequod_d/c` (both UK and US spellings), and a
+  `pequod_preview()` base-R visualiser. Install with
+  `remotes::install_github("tiagojct/pequod", subdir = "r")`.
+  Palette data is generated from `pequod.json` by
+  `r/data-raw/generate_palettes.R`, so the R package cannot drift
+  from the canonical tokens.
+- `Makefile` — `specimen`, `cvd`, `r-data` (regenerate the R
+  palette from the JSON), `r-check` (R CMD check), and `clean`
+  targets.
 - `cover.jpg` bundled in the repo root (README no longer depends on
   an external URL).
+
+### Fixed (follow-up)
+
+- `specimen/specimen.typ`: accent-chip text colour was inverted
+  (cream on already-light chips, navy on already-dark chips) and
+  hex labels were clipped by the column width. Flipped the colour
+  logic and widened the chips to 5.2em.
 
 ### Known limitations
 
