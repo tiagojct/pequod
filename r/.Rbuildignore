@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 ^\.DS_Store$
 ^\.github$
+^cran-comments\.md$
+^pequod_.*\.tar\.gz$
+^pequod\.Rcheck$

@@ -29,3 +29,11 @@ Interpolates across a Pequod palette with
 `"log-cool"` palettes, which are ordered from light to dark; the
 `"crew"` palettes are categorical and will not interpolate cleanly.
 }
+\examples{
+\dontrun{
+library(ggplot2)
+ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+  geom_tile() +
+  scale_fill_pequod_c(palette = "log-cool")
+}
+}

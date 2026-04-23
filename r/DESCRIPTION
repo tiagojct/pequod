@@ -1,6 +1,6 @@
 Package: pequod
 Type: Package
-Title: Pequod Palette for R
+Title: Colour Palette for Reading and Code, Inspired by Moby-Dick
 Version: 0.1.0
 Authors@R: person("Tiago", "Jacinto",
                   email = "tiagojacinto@med.up.pt",
