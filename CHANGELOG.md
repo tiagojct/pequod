@@ -26,6 +26,17 @@ First public release.
 - Licence files: CC-BY-4.0 for the palette tokens and documentation,
   MIT for the theme files and scripts.
 
+### Added (follow-up)
+
+- `specimen/specimen.typ` + rendered `specimen/specimen.pdf` — a
+  one-page A4 reference showing the Log scale, the eight crew
+  accents (light and dark variants), a body-text sample, and a dark
+  code sample with every token coloured by its crew role. Rendered
+  with Typst against system-installed Geist / Geist Mono.
+- `Makefile` with `specimen`, `cvd`, and `clean` targets.
+- `cover.jpg` bundled in the repo root (README no longer depends on
+  an external URL).
+
 ### Known limitations
 
 - Theme files are hand-maintained; they do not yet regenerate

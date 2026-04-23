@@ -40,8 +40,12 @@ pequod/
 │   ├── Pequod-color-theme.json            # VS Code (dark)
 │   ├── Pequod-light-color-theme.json      # VS Code (light)
 │   └── Pequod.zed.json                    # Zed (dark + light in one file)
+├── specimen/
+│   ├── specimen.typ             # single-page specimen source (Typst)
+│   └── specimen.pdf             # rendered output — swatches + samples
 ├── scripts/
 │   └── cvd_check.py             # Viénot–Brettel–Mollon CVD simulation + ΔE
+├── Makefile                     # `make specimen`, `make cvd`, `make clean`
 ├── README.md
 ├── CHANGELOG.md
 ├── LICENSE-CC-BY-4.0            # palette tokens and docs
@@ -155,6 +159,27 @@ python3 scripts/cvd_check.py
 
 The script has no dependencies beyond NumPy.
 
+## Specimen
+
+A one-page A4 specimen — the full Log scale, the eight crew accents
+with light and dark variants, a body-text sample, and a dark code
+sample with every token coloured by its crew role — lives at
+[`specimen/specimen.pdf`](specimen/specimen.pdf). Use it as a quick
+reference when choosing which accent a new UI element should take,
+or print it and pin it somewhere.
+
+The PDF is generated from [`specimen/specimen.typ`](specimen/specimen.typ)
+with [Typst](https://typst.app/). To regenerate after a token change:
+
+```bash
+make specimen
+# equivalent to: typst compile specimen/specimen.typ specimen/specimen.pdf
+```
+
+Typst uses the system-installed Geist and Geist Mono. Install them
+from [Google Fonts](https://fonts.google.com/specimen/Geist) if they
+are not already present.
+
 ## What comes next
 
 - **Generators** that take `pequod.json` and emit each theme target,
@@ -164,8 +189,6 @@ The script has no dependencies beyond NumPy.
   tokens are fixed.
 - **Vim / Neovim colourscheme** using Lush.
 - **Helix, Sublime** — lower priority.
-- A printable **specimen PDF** with body text, code blocks, and the
-  full palette on a single sheet.
 
 Contributions to any of these are welcome.
 
