@@ -17,5 +17,11 @@ __pycache__/
 dist/
 build/
 
+# R CMD build / check artefacts
+r/pequod_*.tar.gz
+r/pequod.Rcheck/
+.Rproj.user/
+.Rhistory
+
 # Experimental / scratch
 scratch/

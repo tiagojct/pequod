@@ -28,38 +28,36 @@ pequod_log <- c(
 #' Pequod crew accents — light variants
 #'
 #' Eight accent hues, each named after a character in *Moby-Dick*,
-#' tuned to sit against a Log 100 paper surface. These are the
-#' saturated, darker values you should use on light-mode UIs.
+#' tuned to sit against a Log 100 paper surface.
 #'
 #' @format A named character vector of length 8.
 #' @export
 pequod_crew_light <- c(
-  Ahab     = "#B5534A",
-  Starbuck = "#527C98",
-  Queequeg = "#4A4E8C",
-  Pip      = "#A8812B",
-  Ishmael  = "#6E6E6B",
-  Stubb    = "#B5683A",
-  Tashtego = "#507352",
-  Daggoo   = "#7A5440"
+  "Ahab"     = "#B5534A",
+  "Starbuck" = "#527C98",
+  "Queequeg" = "#4A4E8C",
+  "Pip"      = "#A8812B",
+  "Ishmael"  = "#6E6E6B",
+  "Stubb"    = "#B5683A",
+  "Tashtego" = "#507352",
+  "Daggoo"   = "#7A5440"
 )
 
 #' Pequod crew accents — dark variants
 #'
 #' Eight accent hues tuned to sit against the Log 950 ink surface.
-#' These are the brighter, de-saturated values for dark-mode UIs.
 #'
 #' @format A named character vector of length 8.
 #' @export
 pequod_crew_dark <- c(
-  Ahab     = "#E07A72",
-  Starbuck = "#7FA8C3",
-  Queequeg = "#8A8ECE",
-  Pip      = "#D9B461",
-  Ishmael  = "#A5A5A0",
-  Stubb    = "#E29B6E",
-  Tashtego = "#8AB08C",
-  Daggoo   = "#AF8870"
+  "Ahab"     = "#E07A72",
+  "Starbuck" = "#7FA8C3",
+  "Queequeg" = "#8A8ECE",
+  "Pip"      = "#D9B461",
+  "Ishmael"  = "#A5A5A0",
+  "Stubb"    = "#E29B6E",
+  "Tashtego" = "#8AB08C",
+  "Daggoo"   = "#AF8870"
 )
 
 #' Pequod crew metadata
@@ -67,24 +65,20 @@ pequod_crew_dark <- c(
 #' A list bundling the light and dark crew accents together with
 #' their suggested syntax roles.
 #'
-#' @format A list with three elements:
-#' \describe{
-#'   \item{light}{Named character vector of 8 hex codes (light variants).}
-#'   \item{dark}{Named character vector of 8 hex codes (dark variants).}
-#'   \item{roles}{Named character vector of 8 role labels (red, blue, etc.).}
-#' }
+#' @format A list with three elements: `light`, `dark`, `roles`.
 #' @export
 pequod_crew <- list(
   light = pequod_crew_light,
   dark  = pequod_crew_dark,
   roles = c(
-    Ahab     = "red",
-    Starbuck = "blue",
-    Queequeg = "indigo",
-    Pip      = "yellow",
-    Ishmael  = "grey",
-    Stubb    = "orange",
-    Tashtego = "green",
-    Daggoo   = "brown"
+    "Ahab"     = "red",
+    "Starbuck" = "blue",
+    "Queequeg" = "indigo",
+    "Pip"      = "yellow",
+    "Ishmael"  = "grey",
+    "Stubb"    = "orange",
+    "Tashtego" = "green",
+    "Daggoo"   = "brown"
   )
 )
+

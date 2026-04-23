@@ -26,7 +26,7 @@ pequod_preview <- function(palette = "log", labels = TRUE) {
   op <- graphics::par(mar = c(2, 1, 3, 1))
   on.exit(graphics::par(op), add = TRUE)
 
-  plot.new()
+  graphics::plot.new()
   graphics::plot.window(xlim = c(0, n), ylim = c(0, 1), asp = NA)
 
   for (i in seq_len(n)) {
@@ -39,5 +39,5 @@ pequod_preview <- function(palette = "log", labels = TRUE) {
 
   graphics::title(main = paste0("Pequod: ", palette), cex.main = 0.95)
 
-  invisible(setNames(cols, nm))
+  invisible(stats::setNames(cols, nm))
 }

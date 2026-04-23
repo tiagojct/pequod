@@ -23,9 +23,10 @@ Depends:
 Imports:
     ggplot2 (>= 3.3.0),
     grDevices,
-    graphics
+    graphics,
+    stats
 Suggests:
     testthat (>= 3.0.0),
     jsonlite
 Config/testthat/edition: 3
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
