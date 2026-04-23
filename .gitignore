@@ -1,0 +1,21 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Build / dist (reserved for future generator output)
+dist/
+build/
+
+# Experimental / scratch
+scratch/
