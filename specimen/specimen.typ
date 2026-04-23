@@ -79,17 +79,21 @@
   )
 }
 
-#let accent-chip(hex, on-dark: false) = {
-  let fg = if on-dark { rgb("#F8F4EB") } else { rgb("#2C3E50") }
+// Accent chips: the "light-variant" hex is the saturated, darker colour
+// (designed against Log 100 paper), so it needs cream text on top. The
+// "dark-variant" hex is the brighter, de-saturated colour (designed
+// against Log 950 ink), so it reads best with navy text.
+#let accent-chip(hex, variant: "light") = {
+  let fg = if variant == "light" { rgb("#F8F4EB") } else { rgb("#2C3E50") }
   block(
     fill: rgb(hex),
     width: 100%,
-    height: 1.6em,
-    inset: (x: 0.4em, y: 0.25em),
+    height: 1.8em,
+    inset: (x: 0.55em, y: 0.3em),
     radius: 2pt,
     stroke: 0.3pt + rgb("#DFD3B8"),
     align(center + horizon,
-      text(fill: fg, size: 7pt, font: "Geist Mono")[#hex]
+      text(fill: fg, size: 7pt, font: "Geist Mono", weight: "medium")[#hex]
     ),
   )
 }
@@ -143,15 +147,15 @@
 #v(0.4em)
 
 #table(
-  columns: (auto, auto, 3.5em, 3.5em, 1fr),
+  columns: (auto, auto, 5.2em, 5.2em, 1fr),
   stroke: none,
   align: (left + horizon, left + horizon, center + horizon, center + horizon, left + horizon),
   inset: (x: 0.5em, y: 0.35em),
   ..crew.map(e => (
     text(weight: "semibold", size: 10pt)[#e.name],
     text(size: 8pt, fill: rgb("#6E5F52"), font: "Geist Mono")[#e.role],
-    accent-chip(e.light, on-dark: false),
-    accent-chip(e.dark, on-dark: true),
+    accent-chip(e.light, variant: "light"),
+    accent-chip(e.dark,  variant: "dark"),
     text(size: 9pt, fill: rgb("#6E5F52"))[#e.note],
   )).flatten()
 )
