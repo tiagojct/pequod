@@ -2,6 +2,19 @@
 
 This is a new submission.
 
+## Resubmission — 2026-04-24
+
+Previous submission flagged a relative file URI in `README.md` linking
+to `../README.md` (Uwe Ligges, 2026-04-24). That worked inside the
+repository — where the R package lives in `r/` and the link walks up
+to the repository-root README — but failed on CRAN, which extracts
+the package as a standalone tarball.
+
+Fixed in this resubmission: the link now points at the absolute
+GitHub URL for the repository README
+(<https://github.com/tiagojct/pequod/blob/main/README.md>), which
+resolves correctly both on CRAN and on GitHub. No other changes.
+
 ## R CMD check results
 
 Local check:

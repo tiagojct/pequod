@@ -5,8 +5,8 @@ the eight crew accents (light and dark variants), and ggplot2 scales
 for both discrete and continuous mapping.
 
 The narrative, design rationale, and full accessibility analysis live
-one directory up in [`../README.md`](../README.md) and on the
-[project website](https://tiagojct.eu/projects/pequod/).
+in the [repository README](https://github.com/tiagojct/pequod/blob/main/README.md)
+and on the [project website](https://tiagojct.eu/projects/pequod/).
 
 ## Install
 
