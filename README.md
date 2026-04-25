@@ -41,8 +41,8 @@ pequod/
 │   ├── Pequod-light-color-theme.json      # VS Code (light) — canonical
 │   └── Pequod.zed.json                    # Zed (dark + light in one file)
 ├── vscode/                      # VS Code extension — `make vsix` builds
-│   │                            # the .vsix; published to the
-│   │                            # Marketplace as "tiagojct.pequod-theme"
+│   │                            # the .vsix; published to the Marketplace
+│   │                            # as "tiagojct.pequod-color-theme"
 │   ├── package.json
 │   ├── icon.png
 │   └── themes/                  # copies of the canonical themes
@@ -75,7 +75,7 @@ Install in any of three ways:
 1. **Marketplace** — search *Pequod* in *Extensions* (⌘⇧X), or visit
    the marketplace page once published.
 2. **`.vsix` file** — build with `make vsix`, then
-   `code --install-extension vscode/pequod-theme-0.1.0.vsix`.
+   `code --install-extension vscode/pequod-color-theme-0.1.0.vsix`.
 3. **From source (no marketplace)** — copy the [`vscode/`](vscode/)
    folder to `~/.vscode/extensions/pequod-theme/`. VS Code will pick
    it up on next launch.

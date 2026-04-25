@@ -64,7 +64,11 @@ First public release.
   Log 950 background), and `.vscodeignore`. Build the .vsix with
   `make vsix`; publish with `make vsce-publish` (requires a
   publisher account and PAT). Theme files inside `vscode/themes/`
-  are copies of the canonical files under `/themes/`.
+  are copies of the canonical files under `/themes/`. Marketplace
+  extension ID: `tiagojct.pequod-color-theme` (the `pequod-theme`
+  slug was already reserved on the VS Marketplace global
+  namespace, so this one falls back to the more explicit
+  VS-Code-convention name).
 
 ### Known limitations
 
