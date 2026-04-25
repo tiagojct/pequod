@@ -37,9 +37,15 @@ pequod/
 ├── pequod.json                  # the canonical palette tokens
 ├── themes/
 │   ├── Pequod.itermcolors                 # iTerm2 (dark)
-│   ├── Pequod-color-theme.json            # VS Code (dark)
-│   ├── Pequod-light-color-theme.json      # VS Code (light)
+│   ├── Pequod-color-theme.json            # VS Code (dark) — canonical
+│   ├── Pequod-light-color-theme.json      # VS Code (light) — canonical
 │   └── Pequod.zed.json                    # Zed (dark + light in one file)
+├── vscode/                      # VS Code extension — `make vsix` builds
+│   │                            # the .vsix; published to the
+│   │                            # Marketplace as "tiagojct.pequod-theme"
+│   ├── package.json
+│   ├── icon.png
+│   └── themes/                  # copies of the canonical themes
 ├── r/                           # R package — install with
 │   │                            #   remotes::install_github(
 │   │                            #     "tiagojct/pequod", subdir = "r")
@@ -63,30 +69,18 @@ pequod/
 
 ### VS Code
 
-VS Code does not load bare colour-theme files; it expects an extension.
-The quickest path:
+The themes ship as a marketplace extension under [`vscode/`](vscode/).
+Install in any of three ways:
 
-1. Clone or download this repo.
-2. Create a folder `~/.vscode/extensions/pequod-theme/` and copy the `themes/`
-   folder into it.
-3. Drop this `package.json` next to `themes/`:
+1. **Marketplace** — search *Pequod* in *Extensions* (⌘⇧X), or visit
+   the marketplace page once published.
+2. **`.vsix` file** — build with `make vsix`, then
+   `code --install-extension vscode/pequod-theme-0.1.0.vsix`.
+3. **From source (no marketplace)** — copy the [`vscode/`](vscode/)
+   folder to `~/.vscode/extensions/pequod-theme/`. VS Code will pick
+   it up on next launch.
 
-   ```json
-   {
-     "name": "pequod-theme",
-     "displayName": "Pequod",
-     "version": "0.1.0",
-     "publisher": "local",
-     "engines": { "vscode": "^1.70.0" },
-     "contributes": {
-       "themes": [
-         { "label": "Pequod",       "uiTheme": "vs-dark", "path": "./themes/Pequod-color-theme.json" },
-         { "label": "Pequod Light", "uiTheme": "vs",      "path": "./themes/Pequod-light-color-theme.json" }
-       ]
-     }
-   }
-   ```
-4. Restart VS Code → *Preferences: Color Theme* → pick **Pequod** or **Pequod Light**.
+Then *Preferences: Color Theme* → pick **Pequod** or **Pequod Light**.
 
 ### Zed
 

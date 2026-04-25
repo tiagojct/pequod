@@ -23,5 +23,9 @@ r/pequod.Rcheck/
 .Rproj.user/
 .Rhistory
 
+# VS Code extension build output
+vscode/*.vsix
+vscode/node_modules/
+
 # Experimental / scratch
 scratch/

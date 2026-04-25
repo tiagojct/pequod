@@ -56,6 +56,16 @@ First public release.
   hex labels were clipped by the column width. Flipped the colour
   logic and widened the chips to 5.2em.
 
+### Added (2026-04-25)
+
+- `vscode/` — the dark and light themes packaged as a Visual Studio
+  Marketplace extension. Includes `package.json`, README,
+  CHANGELOG, MIT LICENSE, a 128×128 icon (eight crew accents on a
+  Log 950 background), and `.vscodeignore`. Build the .vsix with
+  `make vsix`; publish with `make vsce-publish` (requires a
+  publisher account and PAT). Theme files inside `vscode/themes/`
+  are copies of the canonical files under `/themes/`.
+
 ### Known limitations
 
 - Theme files are hand-maintained; they do not yet regenerate
