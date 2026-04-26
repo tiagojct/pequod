@@ -46,6 +46,12 @@ pequod/
 │   ├── package.json
 │   ├── icon.png
 │   └── themes/                  # copies of the canonical themes
+├── python/                      # Python package — install with
+│   │                            #   pip install pequod
+│   ├── pyproject.toml           # see python/README.md for full Python docs
+│   ├── src/pequod/              # palette + matplotlib helpers
+│   ├── tests/
+│   └── data-raw/                # generator: re-reads ../pequod.json
 ├── r/                           # R package — install with
 │   │                            #   remotes::install_github(
 │   │                            #     "tiagojct/pequod", subdir = "r")
@@ -97,6 +103,28 @@ Zed reads user themes directly from disk:
 3. Apply the *Pequod* preset.
 
 An iTerm2 light preset is on the roadmap.
+
+### Python
+
+```bash
+pip install pequod              # palette + helpers
+pip install "pequod[plot]"      # adds matplotlib glue
+```
+
+```python
+from pequod import LOG, CREW_LIGHT, palette
+
+palette("log")                  # 12-step Log scale, list of hex
+palette("crew", n=5)            # first five crew accents
+
+# matplotlib (with the [plot] extra)
+import matplotlib.pyplot as plt
+import pequod
+pequod.register_cmaps()
+plt.imshow(data, cmap="pequod_log")
+```
+
+Full usage in [`python/README.md`](python/README.md).
 
 ### R
 

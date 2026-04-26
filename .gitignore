@@ -27,5 +27,12 @@ r/pequod.Rcheck/
 vscode/*.vsix
 vscode/node_modules/
 
+# Python package build output
+python/dist/
+python/build/
+python/*.egg-info/
+python/**/__pycache__/
+python/.pytest_cache/
+
 # Experimental / scratch
 scratch/

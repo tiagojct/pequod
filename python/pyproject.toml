@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pequod"
+version = "0.1.0"
+description = "A pigment-inspired colour palette for reading and code, rooted in Moby-Dick."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Tiago Jacinto", email = "tiagojacinto@med.up.pt" },
+]
+keywords = [
+    "color", "color-palette", "palette", "theme",
+    "moby-dick", "matplotlib", "accessibility", "typography",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+test = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://tiagojct.eu/projects/pequod/"
+Repository = "https://github.com/tiagojct/pequod"
+"Bug Tracker" = "https://github.com/tiagojct/pequod/issues"
+Changelog = "https://github.com/tiagojct/pequod/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pequod"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/pequod",
+    "README.md",
+    "LICENSE",
+    "tests",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

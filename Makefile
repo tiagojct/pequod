@@ -6,7 +6,7 @@
 
 SHELL := /bin/bash
 
-.PHONY: specimen cvd r-data r-check vsix vsce-publish clean help
+.PHONY: specimen cvd r-data r-check vsix vsce-publish py-data py-build py-test py-publish clean help
 
 help:
 	@echo "Pequod build targets:"
@@ -16,6 +16,10 @@ help:
 	@echo "  make r-check       R CMD check the R package"
 	@echo "  make vsix          Build the VS Code extension as a .vsix"
 	@echo "  make vsce-publish  Publish the VS Code extension to the marketplace"
+	@echo "  make py-data       Regenerate python/src/pequod/_data.py from pequod.json"
+	@echo "  make py-build      Build the Python sdist + wheel"
+	@echo "  make py-test       Run the Python test suite"
+	@echo "  make py-publish    Upload the Python package to PyPI"
 	@echo "  make clean         Remove generated artefacts"
 
 specimen: specimen/specimen.pdf
@@ -38,8 +42,21 @@ vsix:
 vsce-publish:
 	cd vscode && npx --yes @vscode/vsce publish --no-dependencies
 
+py-data:
+	cd python && python3 data-raw/generate_data.py
+
+py-build:
+	cd python && rm -rf dist build *.egg-info && python3 -m build
+
+py-test:
+	cd python && python3 -m pytest
+
+py-publish:
+	cd python && python3 -m twine upload dist/*
+
 clean:
 	rm -f specimen/specimen.pdf
 	rm -f r/pequod_*.tar.gz
 	rm -rf r/pequod.Rcheck
 	rm -f vscode/*.vsix
+	rm -rf python/dist python/build python/*.egg-info python/.pytest_cache

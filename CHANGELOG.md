@@ -56,6 +56,20 @@ First public release.
   hex labels were clipped by the column width. Flipped the colour
   logic and widened the chips to 5.2em.
 
+### Added (2026-04-26)
+
+- `python/` — an installable Python package. Pure-Python data and
+  helpers (`LOG`, `CREW_LIGHT`, `CREW_DARK`, `CREW`, `palette()`)
+  with no required dependencies, plus optional matplotlib glue
+  (`to_cmap()`, `register_cmaps()`) under the `[plot]` extra.
+  Six named palettes (`log`, `log-warm`, `log-cool`, `crew`,
+  `crew-dark`, `syntax`), discrete and continuous interpolation,
+  reverse flag. Built with hatchling; published as `pequod` on PyPI.
+  Data regenerated from `pequod.json` by
+  `python/data-raw/generate_data.py`. 22 pytest tests covering the
+  pure-Python API and the matplotlib integration; tests skip
+  cleanly when matplotlib isn't installed.
+
 ### Added (2026-04-25)
 
 - `vscode/` — the dark and light themes packaged as a Visual Studio
