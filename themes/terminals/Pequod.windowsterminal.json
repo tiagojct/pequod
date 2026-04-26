@@ -1,0 +1,31 @@
+{
+  "_comment_1": "Pequod — Windows Terminal colour scheme (dark)",
+  "_comment_2": "https://tiagojct.eu/projects/pequod/",
+  "_comment_3": "Open Settings → JSON, paste this object into the schemes array,",
+  "_comment_4": "then set defaults.colorScheme to \"Pequod\".",
+
+  "name": "Pequod",
+
+  "background":          "#13181F",
+  "foreground":          "#F8F4EB",
+  "cursorColor":         "#C4A57B",
+  "selectionBackground": "#2C3E50",
+
+  "black":         "#1C2936",
+  "red":           "#E07A72",
+  "green":         "#8AB08C",
+  "yellow":        "#D9B461",
+  "blue":          "#7FA8C3",
+  "purple":        "#8A8ECE",
+  "cyan":          "#9DC2C5",
+  "white":         "#F8F4EB",
+
+  "brightBlack":   "#6E5F52",
+  "brightRed":     "#E99C93",
+  "brightGreen":   "#AFCCA6",
+  "brightYellow":  "#E8CB8C",
+  "brightBlue":    "#A0C2D4",
+  "brightPurple":  "#AAADDA",
+  "brightCyan":    "#BCD9DB",
+  "brightWhite":   "#FBFAF5"
+}

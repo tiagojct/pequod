@@ -6,7 +6,7 @@
 
 SHELL := /bin/bash
 
-.PHONY: specimen cvd r-data r-check vsix vsce-publish py-data py-build py-test py-publish clean help
+.PHONY: specimen cvd r-data r-check vsix vsce-publish py-data py-build py-test py-publish tw-test tw-pack tw-publish clean help
 
 help:
 	@echo "Pequod build targets:"
@@ -20,6 +20,9 @@ help:
 	@echo "  make py-build      Build the Python sdist + wheel"
 	@echo "  make py-test       Run the Python test suite"
 	@echo "  make py-publish    Upload the Python package to PyPI"
+	@echo "  make tw-test       Run the Tailwind plugin tests"
+	@echo "  make tw-pack       Pack the Tailwind plugin as an npm tarball"
+	@echo "  make tw-publish    Publish the Tailwind plugin to npm"
 	@echo "  make clean         Remove generated artefacts"
 
 specimen: specimen/specimen.pdf
@@ -54,9 +57,19 @@ py-test:
 py-publish:
 	cd python && python3 -m twine upload dist/*
 
+tw-test:
+	cd tailwind && node --test test.js
+
+tw-pack:
+	cd tailwind && npm pack
+
+tw-publish:
+	cd tailwind && npm publish
+
 clean:
 	rm -f specimen/specimen.pdf
 	rm -f r/pequod_*.tar.gz
 	rm -rf r/pequod.Rcheck
 	rm -f vscode/*.vsix
 	rm -rf python/dist python/build python/*.egg-info python/.pytest_cache
+	rm -f tailwind/*.tgz

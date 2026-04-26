@@ -56,6 +56,26 @@ First public release.
   hex labels were clipped by the column width. Flipped the colour
   logic and widened the chips to 5.2em.
 
+### Added (2026-04-26, batch 2)
+
+- `themes/terminals/` — six dark terminal presets that share the same
+  ANSI palette mapping (Log 950 background, Log 100 foreground, crew
+  dark variants on ANSI 1–6, brighter shades on 9–14):
+  Ghostty (`Pequod.ghostty`), Alacritty (`Pequod.alacritty.toml`),
+  kitty (`Pequod.kitty.conf`), WezTerm (`Pequod.wezterm.lua`),
+  tmux (`Pequod.tmux.conf`), and Windows Terminal
+  (`Pequod.windowsterminal.json`). Per-terminal install paths in
+  `themes/terminals/README.md`.
+- `tailwind/` — Tailwind CSS plugin published as `pequod-tailwind`
+  on npm. Exposes `log`, `crew`, and a merged `colors` ready to
+  spread into `theme.extend.colors`. Each crew accent has `DEFAULT`,
+  `light`, and `dark` so `bg-ahab` resolves to the saturated value
+  while `bg-ahab-dark` is available for dark-theme contexts.
+  TypeScript types via `index.d.ts`. Six Node-runner tests for
+  shape, hex format, freezing, and anchor values. Tarball is
+  4.5 KB packed; tested against Tailwind v3 config.
+- Makefile: new `tw-test`, `tw-pack`, `tw-publish` targets.
+
 ### Added (2026-04-26)
 
 - `python/` — an installable Python package. Pure-Python data and

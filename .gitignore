@@ -34,5 +34,9 @@ python/*.egg-info/
 python/**/__pycache__/
 python/.pytest_cache/
 
+# Tailwind plugin build output
+tailwind/*.tgz
+tailwind/node_modules/
+
 # Experimental / scratch
 scratch/

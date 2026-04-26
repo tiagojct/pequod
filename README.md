@@ -39,7 +39,10 @@ pequod/
 │   ├── Pequod.itermcolors                 # iTerm2 (dark)
 │   ├── Pequod-color-theme.json            # VS Code (dark) — canonical
 │   ├── Pequod-light-color-theme.json      # VS Code (light) — canonical
-│   └── Pequod.zed.json                    # Zed (dark + light in one file)
+│   ├── Pequod.zed.json                    # Zed (dark + light in one file)
+│   └── terminals/                         # Ghostty, Alacritty, kitty,
+│                                          # WezTerm, tmux, Windows Terminal
+├── tailwind/                    # npm package — `npm install pequod-tailwind`
 ├── vscode/                      # VS Code extension — `make vsix` builds
 │   │                            # the .vsix; published to the Marketplace
 │   │                            # as "tiagojct.pequod-color-theme"
@@ -103,6 +106,50 @@ Zed reads user themes directly from disk:
 3. Apply the *Pequod* preset.
 
 An iTerm2 light preset is on the roadmap.
+
+### Other terminals
+
+Drop-in dark presets for the most common terminals live in
+[`themes/terminals/`](themes/terminals/):
+
+| Terminal | File |
+|---|---|
+| Ghostty | `Pequod.ghostty` |
+| Alacritty | `Pequod.alacritty.toml` |
+| kitty | `Pequod.kitty.conf` |
+| WezTerm | `Pequod.wezterm.lua` |
+| tmux | `Pequod.tmux.conf` |
+| Windows Terminal | `Pequod.windowsterminal.json` |
+
+See [`themes/terminals/README.md`](themes/terminals/README.md) for the
+install path each terminal expects.
+
+### Tailwind CSS
+
+```bash
+npm install pequod-tailwind
+```
+
+```js
+// tailwind.config.js
+const pequod = require("pequod-tailwind");
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: pequod.colors,    // log + all eight crew accents
+    },
+  },
+};
+```
+
+```html
+<body class="bg-log-50 text-log-800 dark:bg-log-950 dark:text-log-100">
+  <h1 class="text-queequeg dark:text-queequeg-dark">Pequod</h1>
+</body>
+```
+
+Full usage in [`tailwind/README.md`](tailwind/README.md).
 
 ### Python
 

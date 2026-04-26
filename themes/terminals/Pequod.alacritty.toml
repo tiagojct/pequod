@@ -1,0 +1,41 @@
+# Pequod — Alacritty colour scheme (dark)
+# https://tiagojct.eu/projects/pequod/
+#
+# Background: Log 950 (#13181F).  Foreground: Log 100 (#F8F4EB).
+# Save to ~/.config/alacritty/themes/pequod.toml and add this line
+# to your alacritty.toml:
+#
+#     [general]
+#     import = ["~/.config/alacritty/themes/pequod.toml"]
+
+[colors.primary]
+background = "#13181F"
+foreground = "#F8F4EB"
+
+[colors.cursor]
+text   = "#13181F"
+cursor = "#C4A57B"
+
+[colors.selection]
+text       = "#F8F4EB"
+background = "#2C3E50"
+
+[colors.normal]
+black   = "#1C2936"
+red     = "#E07A72"
+green   = "#8AB08C"
+yellow  = "#D9B461"
+blue    = "#7FA8C3"
+magenta = "#8A8ECE"
+cyan    = "#9DC2C5"
+white   = "#F8F4EB"
+
+[colors.bright]
+black   = "#6E5F52"
+red     = "#E99C93"
+green   = "#AFCCA6"
+yellow  = "#E8CB8C"
+blue    = "#A0C2D4"
+magenta = "#AAADDA"
+cyan    = "#BCD9DB"
+white   = "#FBFAF5"

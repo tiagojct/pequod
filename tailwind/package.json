@@ -1,0 +1,60 @@
+{
+  "name": "pequod-tailwind",
+  "version": "0.1.0",
+  "description": "Pequod colour palette for Tailwind CSS — warm paper, deep ink, and eight crew accents named after the crew of Moby-Dick's whaler.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./colors": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test.js"
+  },
+  "keywords": [
+    "tailwindcss",
+    "tailwind-plugin",
+    "color-palette",
+    "palette",
+    "theme",
+    "design-tokens",
+    "moby-dick",
+    "accessibility",
+    "typography"
+  ],
+  "author": "Tiago Jacinto <tiagojacinto@med.up.pt>",
+  "license": "MIT",
+  "homepage": "https://tiagojct.eu/projects/pequod/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagojct/pequod.git",
+    "directory": "tailwind"
+  },
+  "bugs": {
+    "url": "https://github.com/tiagojct/pequod/issues"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
