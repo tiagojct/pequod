@@ -6,7 +6,7 @@ after the crew of the Pequod.
 
 [![PyPI](https://img.shields.io/pypi/v/pequod?label=PyPI&color=2C3E50)](https://pypi.org/project/pequod/)
 [![npm](https://img.shields.io/npm/v/pequod-tailwind?label=npm&color=2C3E50)](https://www.npmjs.com/package/pequod-tailwind)
-[![VS Code](https://img.shields.io/visual-studio-marketplace/v/tiagojct.pequod-color-theme?label=VS%20Code&color=2C3E50)](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme)
+[![VS Code](https://vsmarketplacebadges.dev/version-short/tiagojct.pequod-color-theme.svg)](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme)
 [![Open VSX](https://img.shields.io/open-vsx/v/tiagojct/pequod-color-theme?label=Open%20VSX&color=2C3E50)](https://open-vsx.org/extension/tiagojct/pequod-color-theme)
 [![CRAN](https://www.r-pkg.org/badges/version/pequod)](https://CRAN.R-project.org/package=pequod)
 [![Licence](https://img.shields.io/badge/licence-MIT%20%2B%20CC--BY--4.0-C4A57B)](#licence)
@@ -48,6 +48,21 @@ to publish across every ecosystem the palette ships into:
 Hex values may still shift by a point or two during the alpha — palette
 testing continues against more code and long-form prose. Breaking
 changes before 1.0 will be called out in `CHANGELOG.md`.
+
+## Showcase
+
+Four hero plots in matplotlib, two dark, two light:
+
+![Crew accents on dark](examples/01_crew_dark.png)
+![Log scale heatmap](examples/02_log_heatmap.png)
+
+The full gallery and reproducible source live in
+[`examples/`](examples/). Generate them yourself with:
+
+```bash
+pip install "pequod[plot]" numpy
+python examples/plots.py
+```
 
 ## Contents
 
