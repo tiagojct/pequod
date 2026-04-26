@@ -4,6 +4,13 @@ A pigment-inspired colour palette for reading and code, rooted in *Moby-Dick*.
 Warm paper on one end, deep ink on the other, with eight accent hues named
 after the crew of the Pequod.
 
+[![PyPI](https://img.shields.io/pypi/v/pequod?label=PyPI&color=2C3E50)](https://pypi.org/project/pequod/)
+[![npm](https://img.shields.io/npm/v/pequod-tailwind?label=npm&color=2C3E50)](https://www.npmjs.com/package/pequod-tailwind)
+[![VS Code](https://img.shields.io/visual-studio-marketplace/v/tiagojct.pequod-color-theme?label=VS%20Code&color=2C3E50)](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme)
+[![Open VSX](https://img.shields.io/open-vsx/v/tiagojct/pequod-color-theme?label=Open%20VSX&color=2C3E50)](https://open-vsx.org/extension/tiagojct/pequod-color-theme)
+[![CRAN](https://www.r-pkg.org/badges/version/pequod)](https://CRAN.R-project.org/package=pequod)
+[![Licence](https://img.shields.io/badge/licence-MIT%20%2B%20CC--BY--4.0-C4A57B)](#licence)
+
 ![Pequod swatches](./cover.jpg)
 
 - **Base scale:** twelve steps from Log 50 (warm paper) to Log 950 (night sky).
@@ -25,10 +32,22 @@ source of truth for the tokens and the built themes.
 
 ## Status
 
-**Alpha (0.1.0).** Tokens are stable enough to run a website on them, but
-hex values may still shift by a point or two as the palette is tested
-against more code and long-form prose. Breaking changes before 1.0 will
-be called out in `CHANGELOG.md`.
+**Alpha (0.1.0).** Tokens are stable enough to run a website on them and
+to publish across every ecosystem the palette ships into:
+
+| Surface | Where | Status |
+|---|---|---|
+| VS Code extension | [Marketplace](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme), [Open VSX](https://open-vsx.org/extension/tiagojct/pequod-color-theme) | live |
+| Zed theme | `themes/Pequod.zed.json` | drop-in |
+| Terminal presets | `themes/terminals/` | Ghostty, Alacritty, kitty, WezTerm, tmux, Windows Terminal, iTerm2 |
+| Python package | [PyPI](https://pypi.org/project/pequod/) | `pip install pequod` |
+| Tailwind plugin | [npm](https://www.npmjs.com/package/pequod-tailwind) | `npm install pequod-tailwind` |
+| R package | [GitHub](r/) (CRAN review pending) | `remotes::install_github("tiagojct/pequod", subdir = "r")` |
+| Specimen PDF | `specimen/specimen.pdf` | regenerated from tokens |
+
+Hex values may still shift by a point or two during the alpha — palette
+testing continues against more code and long-form prose. Breaking
+changes before 1.0 will be called out in `CHANGELOG.md`.
 
 ## Contents
 
@@ -67,7 +86,7 @@ pequod/
 │   └── specimen.pdf             # rendered output — swatches + samples
 ├── scripts/
 │   └── cvd_check.py             # Viénot–Brettel–Mollon CVD simulation + ΔE
-├── Makefile                     # `make specimen`, `make cvd`, `make clean`
+├── Makefile                     # ~13 targets — see `make help`
 ├── README.md
 ├── CHANGELOG.md
 ├── LICENSE-CC-BY-4.0            # palette tokens and docs
@@ -78,16 +97,18 @@ pequod/
 
 ### VS Code
 
-The themes ship as a marketplace extension under [`vscode/`](vscode/).
-Install in any of three ways:
+The themes ship as a marketplace extension under [`vscode/`](vscode/),
+published as `tiagojct.pequod-color-theme` on both surfaces. Install
+in any of three ways:
 
-1. **Marketplace** — search *Pequod* in *Extensions* (⌘⇧X), or visit
-   the marketplace page once published.
+1. **Marketplace** — open *Extensions* (⌘⇧X), search **Pequod
+   Palette**, install. Or use [the listing page](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme).
+   For VSCodium / Cursor / Gitpod, use the [Open VSX listing](https://open-vsx.org/extension/tiagojct/pequod-color-theme) instead.
 2. **`.vsix` file** — build with `make vsix`, then
    `code --install-extension vscode/pequod-color-theme-0.1.0.vsix`.
 3. **From source (no marketplace)** — copy the [`vscode/`](vscode/)
-   folder to `~/.vscode/extensions/pequod-theme/`. VS Code will pick
-   it up on next launch.
+   folder to `~/.vscode/extensions/pequod-color-theme/`. VS Code will
+   pick it up on next launch.
 
 Then *Preferences: Color Theme* → pick **Pequod** or **Pequod Light**.
 
@@ -175,11 +196,13 @@ Full usage in [`python/README.md`](python/README.md).
 
 ### R
 
-The R package lives in [`r/`](r/) and is installed as a subdirectory:
+The R package lives in [`r/`](r/). CRAN review is pending; until it's
+accepted, install from the GitHub subdirectory:
 
 ```r
 # install.packages("remotes")
 remotes::install_github("tiagojct/pequod", subdir = "r")
+# Once accepted on CRAN: install.packages("pequod")
 
 library(pequod)
 palette_pequod("log")              # 12-step Log scale
@@ -210,9 +233,11 @@ Full usage in [`r/README.md`](r/README.md).
 - `syntax` — default mappings from syntax role to accent (keyword,
   string, comment, function, type, constant, variable, operator).
 
-All theme files in this repo are produced by hand for now. A future
-version will generate them from `pequod.json` so the JSON stays
-authoritative. See `What comes next` below.
+The R package, the Python package, the Typst specimen, and the CVD
+test script all regenerate from `pequod.json` (see each one's
+`data-raw/` or generator). The terminal presets and the editor themes
+are still produced by hand; bringing them under the same generator
+contract is the next priority — see `What comes next` below.
 
 ## Accessibility
 
@@ -283,13 +308,18 @@ are not already present.
 
 ## What comes next
 
-- **Generators** that take `pequod.json` and emit each theme target,
-  so the JSON stays authoritative and themes cannot drift from tokens.
-- **iTerm2 light preset** to round out the terminal theme.
-- **Terminal themes:** Ghostty, Kitty, Alacritty. Trivial once the
-  tokens are fixed.
-- **Vim / Neovim colourscheme** using Lush.
-- **Helix, Sublime** — lower priority.
+- **Generators for the editor and terminal themes**, so the
+  hand-maintained files in `themes/` and `themes/terminals/`
+  regenerate from `pequod.json` the same way the R, Python, and
+  specimen targets already do.
+- **Light presets** for the terminals (currently dark only) and for
+  iTerm2 specifically.
+- **Vim / Neovim colourscheme** using [Lush](https://github.com/rktjmp/lush.nvim).
+- **CRAN release** of the R package (review in flight).
+- **Tailwind v4 plugin** as a first-class plugin once Tailwind v4's
+  plugin API stabilises (the current package works in v4 via
+  `@theme` but isn't formally a v4 plugin yet).
+- **Sublime Text, Helix, Emacs** — lower priority.
 
 Contributions to any of these are welcome.
 
@@ -313,7 +343,8 @@ Contributions to any of these are welcome.
 - **Palette tokens (`pequod.json`) and documentation** — [Creative Commons
   Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
   Use, adapt, ship; credit required. See `LICENSE-CC-BY-4.0`.
-- **Theme files (`themes/*`) and scripts (`scripts/*`)** —
+- **Theme files, scripts, and packages** (`themes/*`, `scripts/*`,
+  `tailwind/*`, `vscode/*`, `python/*`, `r/*`, `specimen/*`) —
   [MIT](https://opensource.org/licenses/MIT). See `LICENSE-MIT`.
 
 ## Contact
