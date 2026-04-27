@@ -12,8 +12,8 @@ The full source for every figure below is in
 [`plots.py`](plots.py); under 350 lines, no helpers beyond
 `pequod.register_cmaps()`, a `_theme()` function that paints the
 axes with the palette's surface tokens, and a `_title()` helper
-that sets the title in Geist SemiBold with the right contrast for
-the surface.
+that sets the title in Atkinson Hyperlegible Next SemiBold with the
+right contrast for the surface.
 
 ## Dark surfaces
 
@@ -36,8 +36,8 @@ no banding and no rainbow distortion.
 ### 6 — Grouped bars
 
 Quarterly values across four crew teams. Subtle bar gaps,
-left-aligned title in Geist SemiBold parchment, mono ticks on the
-quarter labels.
+left-aligned title in Atkinson Hyperlegible Next SemiBold parchment,
+mono ticks on the quarter labels.
 
 ![Grouped bars on dark](06_bars_dark.png)
 
@@ -92,10 +92,11 @@ patterns from `plots.py` worth borrowing are:
   matplotlib colormap.
 - **`_theme(ax, dark=True/False)`** — paints the facecolor,
   spine colour, grid colour, label colour, and tick colour from
-  the palette tokens. Geist Mono is used for tick labels so
+  the palette tokens. JetBrains Mono is used for tick labels so
   digits line up.
 - **`_title(ax, text, dark=True/False)`** — sets the title in
-  Geist SemiBold with the correct contrast for the surface.
+  Atkinson Hyperlegible Next SemiBold with the correct contrast for
+  the surface.
   matplotlib's `set_title` overrides title colour from rcParams,
   so this needs to be called *after* plotting (or instead of
   `set_title`).
@@ -106,11 +107,12 @@ are already tuned for those surfaces.
 
 ## Reproducing on your machine
 
-The script uses Geist as its primary font (matching the rest of
-the project) and falls back to Inter, Helvetica Neue, Arial, and
-DejaVu Sans in that order. Tick labels and value annotations use
-Geist Mono with the same fallback chain. Install
-[Geist](https://fonts.google.com/specimen/Geist) and
-[Geist Mono](https://fonts.google.com/specimen/Geist+Mono) for the
-closest match; everything else still renders, just with a
+The script uses Atkinson Hyperlegible Next as its primary font
+(matching the rest of the project) and falls back to Inter,
+Helvetica Neue, Arial, and DejaVu Sans in that order. Tick labels
+and value annotations use JetBrains Mono with the same fallback
+chain. Install
+[Atkinson Hyperlegible Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)
+and [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
+for the closest match; everything else still renders, just with a
 different typeface.

@@ -58,7 +58,7 @@ and a specimen-style swatch grid. Four on dark, four on light:
 ![Log heatmap on dark](examples/02_log_heatmap.png)
 ![Horizontal bars on light](examples/07_hbars_light.png)
 
-Titles in Geist SemiBold, ticks in Geist Mono, surfaces and series
+Titles in Atkinson Hyperlegible Next SemiBold, ticks in JetBrains Mono, surfaces and series
 colours pulled directly from `pequod.LOG`, `pequod.CREW_LIGHT`, and
 `pequod.CREW_DARK`. Full gallery, code patterns, and reproduction
 instructions live in [`examples/`](examples/). Generate them
@@ -322,9 +322,10 @@ make specimen
 # equivalent to: typst compile specimen/specimen.typ specimen/specimen.pdf
 ```
 
-Typst uses the system-installed Geist and Geist Mono. Install them
-from [Google Fonts](https://fonts.google.com/specimen/Geist) if they
-are not already present.
+Typst uses the system-installed Atkinson Hyperlegible Next and
+JetBrains Mono. Install them from
+[Google Fonts](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next)
+if they are not already present.
 
 ## What comes next
 

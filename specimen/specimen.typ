@@ -1,8 +1,9 @@
 // Pequod — printable palette specimen.
 // Regenerate with: typst compile specimen/specimen.typ specimen/specimen.pdf
 //
-// Fonts: Geist + Geist Mono (Google Fonts, OFL). Must be installed on the
-// system or available via --font-path. The website uses the same fonts.
+// Fonts: Atkinson Hyperlegible Next + JetBrains Mono (Google Fonts, OFL).
+// Must be installed on the system or available via --font-path. The website
+// uses the same fonts.
 
 #set document(
   title: "Pequod — palette specimen",
@@ -16,7 +17,7 @@
 )
 
 #set text(
-  font: "Geist",
+  font: "Atkinson Hyperlegible Next",
   size: 10pt,
   fill: rgb("#2C3E50"),   // Log 800 — ink
 )
@@ -74,7 +75,7 @@
     stack(
       spacing: 0.2em,
       text(fill: fg, size: 8pt, weight: "semibold")[#entry.name],
-      text(fill: fg, size: 7pt, font: "Geist Mono")[#entry.hex],
+      text(fill: fg, size: 7pt, font: "JetBrains Mono")[#entry.hex],
     ),
   )
 }
@@ -93,7 +94,7 @@
     radius: 2pt,
     stroke: 0.3pt + rgb("#DFD3B8"),
     align(center + horizon,
-      text(fill: fg, size: 7pt, font: "Geist Mono", weight: "medium")[#hex]
+      text(fill: fg, size: 7pt, font: "JetBrains Mono", weight: "medium")[#hex]
     ),
   )
 }
@@ -114,7 +115,7 @@
   ),
   stack(
     spacing: 0.25em,
-    text(size: 8pt, fill: rgb("#527275"), font: "Geist Mono")[v0.1.0-alpha],
+    text(size: 8pt, fill: rgb("#527275"), font: "JetBrains Mono")[v0.1.0-alpha],
     text(size: 8pt, fill: rgb("#6E5F52"))[tiagojct.eu/projects/pequod/],
   ),
 )
@@ -153,7 +154,7 @@
   inset: (x: 0.5em, y: 0.35em),
   ..crew.map(e => (
     text(weight: "semibold", size: 10pt)[#e.name],
-    text(size: 8pt, fill: rgb("#6E5F52"), font: "Geist Mono")[#e.role],
+    text(size: 8pt, fill: rgb("#6E5F52"), font: "JetBrains Mono")[#e.role],
     accent-chip(e.light, variant: "light"),
     accent-chip(e.dark,  variant: "dark"),
     text(size: 9pt, fill: rgb("#6E5F52"))[#e.note],
@@ -199,7 +200,7 @@
   radius: 3pt,
   width: 100%,
   [
-    #set text(font: "Geist Mono", size: 9pt, fill: rgb("#F8F4EB"))
+    #set text(font: "JetBrains Mono", size: 9pt, fill: rgb("#F8F4EB"))
     #set par(leading: 0.5em)
 
     #cmt("# Apply the ICD-10 cohort definition for acute MI")#nl
@@ -221,7 +222,7 @@
 // ── licence tag (footer) ───────────────────────────────────────────────
 
 #align(center)[
-  #text(size: 7pt, fill: rgb("#8B7B6B"), font: "Geist Mono")[
+  #text(size: 7pt, fill: rgb("#8B7B6B"), font: "JetBrains Mono")[
     PEQUOD  ·  v0.1.0-alpha  ·  CC-BY-4.0 (palette) + MIT (code)  ·  github.com/tiagojct/pequod
   ]
 ]

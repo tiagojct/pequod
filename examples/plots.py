@@ -8,10 +8,11 @@ Run with:
     pip install "pequod[plot]" numpy
     python plots.py
 
-Designed to mirror the website typography: titles set in Geist
-SemiBold, body text in Geist, monospace ticks/labels in Geist Mono.
-matplotlib falls back through Inter / Helvetica Neue / DejaVu Sans
-if Geist is not installed.
+Designed to mirror the website typography: titles set in Atkinson
+Hyperlegible Next SemiBold, body text in Atkinson Hyperlegible Next,
+monospace ticks/labels in JetBrains Mono. matplotlib falls back
+through Inter / Helvetica Neue / DejaVu Sans if Atkinson Hyperlegible
+Next is not installed.
 """
 
 from __future__ import annotations
@@ -19,6 +20,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import matplotlib as mpl
+import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -27,6 +29,21 @@ import pequod
 OUT = Path(__file__).resolve().parent
 DPI = 200
 RNG = np.random.default_rng(11)
+
+# matplotlib's font scanner skips filenames containing '[' (the
+# variable-axis convention used by Google Fonts), so a user-installed
+# `AtkinsonHyperlegibleNext[wght].ttf` won't be discovered automatically.
+# Register any matching variable font explicitly.
+def _register_user_variable_fonts(*name_fragments: str) -> None:
+    user_font_dirs = (Path.home() / "Library" / "Fonts", Path.home() / ".local" / "share" / "fonts")
+    for d in user_font_dirs:
+        if not d.is_dir():
+            continue
+        for path in d.glob("*.ttf"):
+            if any(frag.lower() in path.name.lower() for frag in name_fragments):
+                fm.fontManager.addfont(str(path))
+
+_register_user_variable_fonts("AtkinsonHyperlegibleNext", "JetBrainsMono")
 
 # Register the colormaps once for the whole script.
 pequod.register_cmaps()
@@ -45,9 +62,9 @@ GRID_LIGHT  = pequod.LOG["Log 200"]
 
 
 def _set_typography():
-    """Match the website typography: Geist for prose, Geist Mono for code/ticks."""
+    """Match the website typography: Atkinson Hyperlegible Next for prose, JetBrains Mono for code/ticks."""
     mpl.rcParams.update({
-        "font.family":      ["Geist", "Inter", "Helvetica Neue", "Arial", "DejaVu Sans"],
+        "font.family":      ["Atkinson Hyperlegible Next", "Inter", "Helvetica Neue", "Arial", "DejaVu Sans"],
         "font.size":        11,
         "axes.titlesize":   16,
         "axes.titleweight": 600,
@@ -64,7 +81,7 @@ def _set_typography():
         "figure.dpi":  DPI,
         "savefig.dpi": DPI,
         "savefig.bbox": "tight",
-        # Tick labels in Geist Mono so digits line up.
+        # Tick labels in JetBrains Mono so digits line up.
         "xtick.color": MUTED_DARK,
         "ytick.color": MUTED_DARK,
     })
@@ -92,7 +109,7 @@ def _theme(ax, *, dark: bool, mono_ticks: bool = True):
     ax.tick_params(colors=muted, which="both", length=4, width=0.7)
     if mono_ticks:
         for lab in ax.get_xticklabels() + ax.get_yticklabels():
-            lab.set_fontfamily(["Geist Mono", "SF Mono", "DejaVu Sans Mono"])
+            lab.set_fontfamily(["JetBrains Mono", "SF Mono", "DejaVu Sans Mono"])
             lab.set_color(muted)
     ax.xaxis.label.set_color(body)
     ax.yaxis.label.set_color(body)
@@ -101,7 +118,7 @@ def _theme(ax, *, dark: bool, mono_ticks: bool = True):
 
 
 def _title(ax, text, *, dark: bool, **kwargs):
-    """Set a left-aligned title in Geist SemiBold with the right contrast."""
+    """Set a left-aligned title in Atkinson Hyperlegible Next SemiBold with the right contrast."""
     color = HEAD_DARK if dark else HEAD_LIGHT
     ax.set_title(text, color=color, fontweight=600, fontsize=16,
                  loc="left", pad=18, **kwargs)
@@ -176,7 +193,7 @@ def heatmap_log():
     cbar.ax.tick_params(colors=MUTED_DARK)
     cbar.set_label("density", color=INK_TEXT)
     for lab in cbar.ax.get_yticklabels():
-        lab.set_fontfamily(["Geist Mono", "SF Mono", "DejaVu Sans Mono"])
+        lab.set_fontfamily(["JetBrains Mono", "SF Mono", "DejaVu Sans Mono"])
 
     fig.savefig(OUT / "02_log_heatmap.png")
     plt.close(fig)
@@ -234,7 +251,7 @@ def swatch_grid():
                 fontsize=12, fontweight=600)
         ax.text(i + 0.5, 0.32, hex_col,
                 ha="center", va="center", color=text_col,
-                fontsize=8, family="Geist Mono")
+                fontsize=8, family="JetBrains Mono")
     ax.set_xlim(0, n); ax.set_ylim(0, 1)
     ax.set_xticks([]); ax.set_yticks([])
     for s in ax.spines.values(): s.set_visible(False)
@@ -251,9 +268,9 @@ def swatch_grid():
         ax.text(i + 0.5, 1.08, name, ha="center", va="bottom",
                 color=PAPER_TEXT, fontsize=11, fontweight=600)
         ax.text(i + 0.5, 0.75, light, ha="center", va="center",
-                color=INK_TEXT, fontsize=7.5, family="Geist Mono")
+                color=INK_TEXT, fontsize=7.5, family="JetBrains Mono")
         ax.text(i + 0.5, 0.25, dark, ha="center", va="center",
-                color=PAPER_TEXT, fontsize=7.5, family="Geist Mono")
+                color=PAPER_TEXT, fontsize=7.5, family="JetBrains Mono")
     ax.set_xlim(0, n); ax.set_ylim(0, 1.18)
     ax.set_xticks([]); ax.set_yticks([])
     for s in ax.spines.values(): s.set_visible(False)
@@ -324,7 +341,7 @@ def bars_dark():
     ax.set_xlabel("quarter"); ax.set_ylabel("throughput  (a.u.)")
     ax.set_xticks(x); ax.set_xticklabels(categories)
     for lab in ax.get_xticklabels():
-        lab.set_fontfamily(["Geist Mono", "SF Mono", "DejaVu Sans Mono"])
+        lab.set_fontfamily(["JetBrains Mono", "SF Mono", "DejaVu Sans Mono"])
         lab.set_color(MUTED_DARK)
     _legend(ax, dark=True, loc="upper left", ncols=2)
 
@@ -363,11 +380,11 @@ def hbars_light():
         ax.text(v + 0.12, yi, f"{v:.1f}",
                 va="center", ha="left",
                 color=PAPER_TEXT, fontsize=9.5,
-                fontfamily=["Geist Mono", "SF Mono", "DejaVu Sans Mono"])
+                fontfamily=["JetBrains Mono", "SF Mono", "DejaVu Sans Mono"])
 
     ax.set_yticks(y); ax.set_yticklabels(names)
     for lab in ax.get_yticklabels():
-        lab.set_fontfamily(["Geist", "Inter", "DejaVu Sans"])
+        lab.set_fontfamily(["Atkinson Hyperlegible Next", "Inter", "DejaVu Sans"])
         lab.set_color(PAPER_TEXT)
     _title(ax, "Crew rank by mentions in the corpus", dark=False)
     ax.set_xlabel("mentions  ×  10³")
@@ -416,7 +433,7 @@ def boxplot_dark():
     ax.set_xticks(np.arange(1, len(names) + 1))
     ax.set_xticklabels(names)
     for lab in ax.get_xticklabels():
-        lab.set_fontfamily(["Geist", "Inter", "DejaVu Sans"])
+        lab.set_fontfamily(["Atkinson Hyperlegible Next", "Inter", "DejaVu Sans"])
         lab.set_color(INK_TEXT)
     _title(ax, "Per-crew distribution — eight box plots", dark=True)
     ax.set_ylabel("value")
