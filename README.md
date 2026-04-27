@@ -51,13 +51,18 @@ changes before 1.0 will be called out in `CHANGELOG.md`.
 
 ## Showcase
 
-Four hero plots in matplotlib, two dark, two light:
+Eight hero plots in matplotlib — sequential heatmaps, grouped and
+horizontal bars, scatter, box plots, distributions, time series,
+and a specimen-style swatch grid. Four on dark, four on light:
 
-![Crew accents on dark](examples/01_crew_dark.png)
-![Log scale heatmap](examples/02_log_heatmap.png)
+![Log heatmap on dark](examples/02_log_heatmap.png)
+![Horizontal bars on light](examples/07_hbars_light.png)
 
-The full gallery and reproducible source live in
-[`examples/`](examples/). Generate them yourself with:
+Titles in Geist SemiBold, ticks in Geist Mono, surfaces and series
+colours pulled directly from `pequod.LOG`, `pequod.CREW_LIGHT`, and
+`pequod.CREW_DARK`. Full gallery, code patterns, and reproduction
+instructions live in [`examples/`](examples/). Generate them
+yourself with:
 
 ```bash
 pip install "pequod[plot]" numpy
