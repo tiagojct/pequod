@@ -30,10 +30,8 @@ be dropped into any ggplot that uses a discrete colour or fill
 aesthetic.
 }
 \examples{
-\dontrun{
 library(ggplot2)
 ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
   geom_point() +
   scale_color_pequod_d(palette = "crew")
-}
 }

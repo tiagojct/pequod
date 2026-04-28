@@ -13,12 +13,10 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' library(ggplot2)
 #' ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
 #'   geom_point() +
 #'   scale_color_pequod_d(palette = "crew")
-#' }
 scale_color_pequod_d <- function(palette = "crew",
                                  reverse = FALSE,
                                  direction = 1,
@@ -64,12 +62,10 @@ scale_fill_pequod_d <- function(palette = "crew",
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' library(ggplot2)
 #' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
 #'   geom_tile() +
 #'   scale_fill_pequod_c(palette = "log-cool")
-#' }
 scale_color_pequod_c <- function(palette = "log", reverse = FALSE, ...) {
   cols <- palette_pequod(palette, type = "discrete")
   if (isTRUE(reverse)) cols <- rev(cols)

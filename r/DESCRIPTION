@@ -1,7 +1,7 @@
 Package: pequod
 Type: Package
 Title: Colour Palette for Reading and Code, Inspired by Moby-Dick
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Tiago", "Jacinto",
                   email = "tiagojacinto@med.up.pt",
                   role = c("aut", "cre"),
@@ -12,7 +12,8 @@ Description: The Pequod colour palette, named after the whaler in
     accent hues with light and dark variants, and 'ggplot2' scales
     for discrete and continuous mapping. Designed for long-form
     reading and code, with low saturation and a consistent earth-
-    pigment register.
+    pigment register. Full design rationale and accessibility notes
+    at <https://tiagojct.eu/projects/pequod/>.
 License: MIT + file LICENSE
 URL: https://tiagojct.eu/projects/pequod/,
     https://github.com/tiagojct/pequod
