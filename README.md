@@ -42,7 +42,7 @@ to publish across every ecosystem the palette ships into:
 | Terminal presets | `themes/terminals/` | Ghostty, Alacritty, kitty, WezTerm, tmux, Windows Terminal, iTerm2 |
 | Python package | [PyPI](https://pypi.org/project/pequod/) | `pip install pequod` |
 | Tailwind plugin | [npm](https://www.npmjs.com/package/pequod-tailwind) | `npm install pequod-tailwind` |
-| R package | [GitHub](r/) (CRAN review pending) | `remotes::install_github("tiagojct/pequod", subdir = "r")` |
+| R package | [CRAN](https://CRAN.R-project.org/package=pequod) | `install.packages("pequod")` |
 | Specimen PDF | `specimen/specimen.pdf` | regenerated from tokens |
 
 Hex values may still shift by a point or two during the alpha — palette
@@ -216,19 +216,19 @@ Full usage in [`python/README.md`](python/README.md).
 
 ### R
 
-The R package lives in [`r/`](r/). CRAN review is pending; until it's
-accepted, install from the GitHub subdirectory:
+The R package is on [CRAN](https://CRAN.R-project.org/package=pequod):
 
 ```r
-# install.packages("remotes")
-remotes::install_github("tiagojct/pequod", subdir = "r")
-# Once accepted on CRAN: install.packages("pequod")
+install.packages("pequod")
 
 library(pequod)
 palette_pequod("log")              # 12-step Log scale
 palette_pequod("crew", n = 5)      # first five crew accents
 pequod_preview("crew")             # quick base-R preview
 ```
+
+Source lives in [`r/`](r/); to follow the development version,
+`remotes::install_github("tiagojct/pequod", subdir = "r")`.
 
 ggplot2 scales are provided too:
 
@@ -336,7 +336,6 @@ if they are not already present.
 - **Light presets** for the terminals (currently dark only) and for
   iTerm2 specifically.
 - **Vim / Neovim colourscheme** using [Lush](https://github.com/rktjmp/lush.nvim).
-- **CRAN release** of the R package (review in flight).
 - **Tailwind v4 plugin** as a first-class plugin once Tailwind v4's
   plugin API stabilises (the current package works in v4 via
   `@theme` but isn't formally a v4 plugin yet).
