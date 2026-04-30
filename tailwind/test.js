@@ -47,10 +47,10 @@ test("known palette exports are frozen", () => {
 });
 
 test("specific anchor values match the canonical pequod.json", () => {
-  assert.equal(pkg.log[50],  "#FBFAF5");
-  assert.equal(pkg.log[100], "#F8F4EB");
-  assert.equal(pkg.log[800], "#2C3E50");
-  assert.equal(pkg.log[950], "#13181F");
-  assert.equal(pkg.crew.ahab.light, "#B5534A");
-  assert.equal(pkg.crew.starbuck.dark, "#7FA8C3");
+  assert.equal(pkg.log[50],  "#F7F3EE");
+  assert.equal(pkg.log[100], "#EAE1D7");
+  assert.equal(pkg.log[800], "#0D2F42");
+  assert.equal(pkg.log[950], "#0B1720");
+  assert.equal(pkg.crew.ahab.light, "#A83732");
+  assert.equal(pkg.crew.starbuck.dark, "#A6DFFF");
 });

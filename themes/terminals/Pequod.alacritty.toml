@@ -1,7 +1,7 @@
 # Pequod — Alacritty colour scheme (dark)
 # https://tiagojct.eu/projects/pequod/
 #
-# Background: Log 950 (#13181F).  Foreground: Log 100 (#F8F4EB).
+# Background: Log 950 (#0B1720).  Foreground: Log 100 (#EAE1D7).
 # Save to ~/.config/alacritty/themes/pequod.toml and add this line
 # to your alacritty.toml:
 #
@@ -9,33 +9,33 @@
 #     import = ["~/.config/alacritty/themes/pequod.toml"]
 
 [colors.primary]
-background = "#13181F"
-foreground = "#F8F4EB"
+background = "#0B1720"
+foreground = "#EAE1D7"
 
 [colors.cursor]
-text   = "#13181F"
-cursor = "#C4A57B"
+text   = "#0B1720"
+cursor = "#BD8C68"
 
 [colors.selection]
-text       = "#F8F4EB"
-background = "#2C3E50"
+text       = "#EAE1D7"
+background = "#0D2F42"
 
 [colors.normal]
-black   = "#1C2936"
-red     = "#E07A72"
-green   = "#8AB08C"
-yellow  = "#D9B461"
-blue    = "#7FA8C3"
-magenta = "#8A8ECE"
+black   = "#0C222F"
+red     = "#E3877C"
+green   = "#82C4A2"
+yellow  = "#DEC577"
+blue    = "#A6DFFF"
+magenta = "#838CCF"
 cyan    = "#9DC2C5"
-white   = "#F8F4EB"
+white   = "#EAE1D7"
 
 [colors.bright]
-black   = "#6E5F52"
+black   = "#335260"
 red     = "#E99C93"
 green   = "#AFCCA6"
 yellow  = "#E8CB8C"
 blue    = "#A0C2D4"
 magenta = "#AAADDA"
 cyan    = "#BCD9DB"
-white   = "#FBFAF5"
+white   = "#F7F3EE"

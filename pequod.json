@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "Pequod",
-  "version": "0.1.0-alpha",
+  "version": "0.2.0-alpha",
   "description": "A pigment-inspired palette for reading and code, rooted in Moby-Dick. Warm paper on one end, deep ink on the other, with eight accent hues named after the crew of the Pequod.",
   "author": "Tiago Jacinto",
   "homepage": "https://tiagojct.eu/projects/pequod/",
@@ -11,29 +11,29 @@
   },
 
   "log": {
-    "50":  "#FBFAF5",
-    "100": "#F8F4EB",
-    "150": "#ECE5D3",
-    "200": "#DFD3B8",
-    "300": "#C4A57B",
-    "400": "#A8865E",
-    "500": "#8B7B6B",
-    "600": "#6E5F52",
-    "700": "#527275",
-    "800": "#2C3E50",
-    "900": "#1C2936",
-    "950": "#13181F"
+    "50":  "#F7F3EE",
+    "100": "#EAE1D7",
+    "150": "#DBC9B6",
+    "200": "#CFAD8E",
+    "300": "#BD8C68",
+    "400": "#A16E50",
+    "500": "#835A49",
+    "600": "#335260",
+    "700": "#163F54",
+    "800": "#0D2F42",
+    "900": "#0C222F",
+    "950": "#0B1720"
   },
 
   "accents": {
-    "ahab":    { "light": "#B5534A", "dark": "#E07A72", "role": "red",    "note": "Obsession, fire, the wound." },
-    "starbuck":{ "light": "#527C98", "dark": "#7FA8C3", "role": "blue",   "note": "The steady mate; sea and storm." },
-    "queequeg":{ "light": "#4A4E8C", "dark": "#8A8ECE", "role": "indigo", "note": "Tattoo ink; loyalty and strangeness." },
-    "pip":     { "light": "#A8812B", "dark": "#D9B461", "role": "yellow", "note": "Child of the sun; the lost soul." },
-    "ishmael": { "light": "#6E6E6B", "dark": "#A5A5A0", "role": "grey",   "note": "The narrator; observer, transparent." },
-    "stubb":   { "light": "#B5683A", "dark": "#E29B6E", "role": "orange", "note": "The pipe-smoking second mate; amber and flame." },
-    "tashtego":{ "light": "#507352", "dark": "#8AB08C", "role": "green",  "note": "Gay Head harpooneer; woods and moss." },
-    "daggoo":  { "light": "#7A5440", "dark": "#AF8870", "role": "brown",  "note": "African-born harpooneer; earth and mahogany." }
+    "ahab":    { "light": "#A83732", "dark": "#E3877C", "role": "red",    "note": "Obsession, fire, the wound." },
+    "starbuck":{ "light": "#0082B1", "dark": "#A6DFFF", "role": "blue",   "note": "The steady mate; sea and storm." },
+    "queequeg":{ "light": "#253E82", "dark": "#838CCF", "role": "indigo", "note": "Tattoo ink; loyalty and strangeness." },
+    "pip":     { "light": "#6A4A00", "dark": "#DEC577", "role": "yellow", "note": "Child of the sun; the lost soul." },
+    "ishmael": { "light": "#76716B", "dark": "#BFBBB6", "role": "grey",   "note": "The narrator; observer, transparent." },
+    "stubb":   { "light": "#CA6435", "dark": "#FFD9BB", "role": "orange", "note": "The pipe-smoking second mate; amber and flame." },
+    "tashtego":{ "light": "#177C55", "dark": "#82C4A2", "role": "green",  "note": "Gay Head harpooneer; woods and moss." },
+    "daggoo":  { "light": "#552823", "dark": "#A17069", "role": "brown",  "note": "African-born harpooneer; earth and mahogany." }
   },
 
   "roles": {

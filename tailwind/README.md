@@ -61,11 +61,11 @@ Now you can write classes like:
 
 /* or, more precisely, declare the tokens yourself: */
 @theme {
-  --color-log-50:  #FBFAF5;
-  --color-log-100: #F8F4EB;
+  --color-log-50:  #F7F3EE;
+  --color-log-100: #EAE1D7;
   /* ... etc; see `node_modules/pequod-tailwind/index.js` for all values */
-  --color-ahab:    #B5534A;
-  --color-ahab-dark: #E07A72;
+  --color-ahab:    #A83732;
+  --color-ahab-dark: #E3877C;
 }
 ```
 
@@ -98,7 +98,7 @@ module.exports = {
 ```js
 const pequod = require("pequod-tailwind");
 
-pequod.log        // { 50: "#FBFAF5", 100: "#F8F4EB", ..., 950: "#13181F" }
+pequod.log        // { 50: "#F7F3EE", 100: "#EAE1D7", ..., 950: "#0B1720" }
 pequod.crew       // { ahab: { DEFAULT, light, dark }, starbuck: {...}, ... }
 pequod.colors     // { log, ahab, starbuck, queequeg, pip, ishmael,
                   //   stubb, tashtego, daggoo }

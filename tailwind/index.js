@@ -27,7 +27,7 @@
  * Tailwind v4: import the plugin or merge the colours via the @theme
  * directive. See README.md for the v4 example.
  *
- * Generated from pequod.json (v0.1.0-alpha) — do not edit by hand.
+ * Generated from pequod.json (v0.2.0-alpha) — do not edit by hand.
  * Re-generate with: node data-raw/generate.mjs
  */
 
@@ -35,18 +35,18 @@
 
 /** @type {Record<string, string>} The twelve-step Log base scale. */
 const log = Object.freeze({
-  50:  "#FBFAF5",
-  100: "#F8F4EB",
-  150: "#ECE5D3",
-  200: "#DFD3B8",
-  300: "#C4A57B",
-  400: "#A8865E",
-  500: "#8B7B6B",
-  600: "#6E5F52",
-  700: "#527275",
-  800: "#2C3E50",
-  900: "#1C2936",
-  950: "#13181F",
+  50:  "#F7F3EE",
+  100: "#EAE1D7",
+  150: "#DBC9B6",
+  200: "#CFAD8E",
+  300: "#BD8C68",
+  400: "#A16E50",
+  500: "#835A49",
+  600: "#335260",
+  700: "#163F54",
+  800: "#0D2F42",
+  900: "#0C222F",
+  950: "#0B1720",
 });
 
 /**
@@ -55,14 +55,14 @@ const log = Object.freeze({
  * an explicit `light`, and a `dark` for dark-theme contexts.
  */
 const crew = Object.freeze({
-  ahab:     Object.freeze({ DEFAULT: "#B5534A", light: "#B5534A", dark: "#E07A72" }),
-  starbuck: Object.freeze({ DEFAULT: "#527C98", light: "#527C98", dark: "#7FA8C3" }),
-  queequeg: Object.freeze({ DEFAULT: "#4A4E8C", light: "#4A4E8C", dark: "#8A8ECE" }),
-  pip:      Object.freeze({ DEFAULT: "#A8812B", light: "#A8812B", dark: "#D9B461" }),
-  ishmael:  Object.freeze({ DEFAULT: "#6E6E6B", light: "#6E6E6B", dark: "#A5A5A0" }),
-  stubb:    Object.freeze({ DEFAULT: "#B5683A", light: "#B5683A", dark: "#E29B6E" }),
-  tashtego: Object.freeze({ DEFAULT: "#507352", light: "#507352", dark: "#8AB08C" }),
-  daggoo:   Object.freeze({ DEFAULT: "#7A5440", light: "#7A5440", dark: "#AF8870" }),
+  ahab:     Object.freeze({ DEFAULT: "#A83732", light: "#A83732", dark: "#E3877C" }),
+  starbuck: Object.freeze({ DEFAULT: "#0082B1", light: "#0082B1", dark: "#A6DFFF" }),
+  queequeg: Object.freeze({ DEFAULT: "#253E82", light: "#253E82", dark: "#838CCF" }),
+  pip:      Object.freeze({ DEFAULT: "#6A4A00", light: "#6A4A00", dark: "#DEC577" }),
+  ishmael:  Object.freeze({ DEFAULT: "#76716B", light: "#76716B", dark: "#BFBBB6" }),
+  stubb:    Object.freeze({ DEFAULT: "#CA6435", light: "#CA6435", dark: "#FFD9BB" }),
+  tashtego: Object.freeze({ DEFAULT: "#177C55", light: "#177C55", dark: "#82C4A2" }),
+  daggoo:   Object.freeze({ DEFAULT: "#552823", light: "#552823", dark: "#A17069" }),
 });
 
 /**

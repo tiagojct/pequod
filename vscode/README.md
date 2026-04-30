@@ -21,14 +21,14 @@ Each accent is a character with a syntax role:
 
 | Crew | Role | Light | Dark |
 |---|---|---|---|
-| **Ahab** — the wound, the fire | keywords, errors | `#B5534A` | `#E07A72` |
-| **Starbuck** — moderate reason | functions, links | `#527C98` | `#7FA8C3` |
-| **Queequeg** — tattoos, loyalty | types, classes | `#4A4E8C` | `#8A8ECE` |
-| **Pip** — sun-addled | numbers, literals | `#A8812B` | `#D9B461` |
-| **Ishmael** — the narrator | comments, punctuation | `#6E6E6B` | `#A5A5A0` |
-| **Stubb** — pipe smoke | constants, warnings | `#B5683A` | `#E29B6E` |
-| **Tashtego** — moss, low pine | strings, success | `#507352` | `#8AB08C` |
-| **Daggoo** — mahogany | variables, properties | `#7A5440` | `#AF8870` |
+| **Ahab** — the wound, the fire | keywords, errors | `#A83732` | `#E3877C` |
+| **Starbuck** — moderate reason | functions, links | `#0082B1` | `#A6DFFF` |
+| **Queequeg** — tattoos, loyalty | types, classes | `#253E82` | `#838CCF` |
+| **Pip** — sun-addled | numbers, literals | `#6A4A00` | `#DEC577` |
+| **Ishmael** — the narrator | comments, punctuation | `#76716B` | `#BFBBB6` |
+| **Stubb** — pipe smoke | constants, warnings | `#CA6435` | `#FFD9BB` |
+| **Tashtego** — moss, low pine | strings, success | `#177c55` | `#82C4A2` |
+| **Daggoo** — mahogany | variables, properties | `#552823` | `#a17069` |
 
 ## Accessibility
 

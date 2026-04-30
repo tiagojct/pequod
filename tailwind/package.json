@@ -1,6 +1,6 @@
 {
   "name": "pequod-tailwind",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Pequod colour palette for Tailwind CSS — warm paper, deep ink, and eight crew accents named after the crew of Moby-Dick's whaler.",
   "main": "index.js",
   "types": "index.d.ts",

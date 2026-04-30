@@ -67,15 +67,15 @@ def test_palette_default_name_is_log():
 
 
 def test_palette_n_truncates_for_discrete():
-    assert palette("crew", n=3) == ["#B5534A", "#527C98", "#4A4E8C"]
+    assert palette("crew", n=3) == ["#A83732", "#0082B1", "#253E82"]
 
 
 def test_palette_continuous_interpolates():
     out = palette("log", n=100, kind="continuous")
     assert len(out) == 100
     assert all(HEX_RE.match(c) for c in out)
-    assert out[0] == "#FBFAF5"     # endpoint preserved
-    assert out[-1] == "#13181F"    # endpoint preserved
+    assert out[0] == "#F7F3EE"     # endpoint preserved
+    assert out[-1] == "#0B1720"    # endpoint preserved
 
 
 def test_palette_reverse_flips_order():

@@ -7,9 +7,9 @@ Quick start
 -----------
 >>> from pequod import LOG, CREW_LIGHT, palette
 >>> palette("log")[:3]
-['#FBFAF5', '#F8F4EB', '#ECE5D3']
+['#F7F3EE', '#EAE1D7', '#DBC9B6']
 >>> palette("crew", n=3)
-['#B5534A', '#527C98', '#4A4E8C']
+['#A83732', '#0082B1', '#253E82']
 
 Matplotlib
 ----------

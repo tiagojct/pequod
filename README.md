@@ -265,37 +265,45 @@ Body-text contrast on the reference surfaces:
 
 | Pair | Use | Ratio |
 |---|---|---|
-| Log 800 on Log 50 | light body | 10.5 : 1 |
-| Log 700 on Log 50 | light link | 5.0 : 1 |
-| Log 400 on Log 50 | muted / large text | 3.2 : 1 |
-| Log 100 on Log 950 | dark body | 16.2 : 1 |
-| Accent-light on Log 100 | UI accents | 3.3 – 6.9 : 1 |
-| Accent-dark on Log 950 | dark-mode accents | 5.6 – 9.0 : 1 |
+| Log 800 on Log 100 | light body | 10.8 : 1 |
+| Log 700 on Log 50 | light link | 8.5 : 1 |
+| Log 400 on Log 50 | muted / large text | 3.9 : 1 |
+| Log 100 on Log 950 | dark body | 14.0 : 1 |
+| Accent-light on Log 100 | UI accents | 3.0 – 9.5 : 1 |
+| Accent-dark on Log 950 | dark-mode accents | 3.6 – 13.6 : 1 |
 
-Five of eight light-mode accents clear 4.5:1 on Log 100 for body text
-(Queequeg, Daggoo, Tashtego, Ishmael, Ahab). Pip, Stubb, and Starbuck
-fall short; use them for bold, large text (≥ 18.7 px), or UI-only uses
-where AA-large (3:1) is the relevant target.
+In v0.2.0-alpha every accent clears the AA-large (3 : 1) bar on its target
+surface — none of the bright-on-light "fill-only" cases from v0.1 remain.
+Light-mode body-text candidates (≥ 4.5 : 1 on Log 100): **Daggoo**,
+**Queequeg**, **Pip**, **Ahab**. Dark-mode body-text candidates (≥ 4.5 : 1
+on Log 950): every accent except **Daggoo** (3.6, AA-large only).
 
 ### Colour vision deficiency
 
 `scripts/cvd_check.py` simulates each accent at 100 % severity for
 protanopia, deuteranopia, and tritanopia using the Viénot–Brettel–Mollon
 (1999) model, and reports pairwise ΔE*~ab~ (CIE76, Lab D65) between
-simulated accents. Worst-case collapses (ΔE < 10) documented:
+simulated accents.
 
-- **Pip ↔ Stubb** — collapse under tritanopia (ΔE 1.0 light / 2.3 dark).
-- **Ahab ↔ Daggoo** — collapse under protanopia (ΔE 4.6 / 2.8).
-- **Ahab ↔ Stubb, Ahab ↔ Pip** — collapse under tritanopia.
-- **Queequeg ↔ Tashtego** — close under tritanopia-dark (ΔE 7.2).
+In v0.2.0-alpha the worst-case pair under each simulation:
 
-Queequeg and Starbuck stay separable across all three simulations
-(minimum ΔE 15.8 in deuteranopia-dark).
+| | light variants | dark variants |
+|---|---|---|
+| protanopia    | Ishmael ↔ Tashtego, ΔE 15.1 | Stubb ↔ Tashtego, ΔE 11.8 |
+| deuteranopia  | Ishmael ↔ Tashtego, ΔE 8.0  | Ishmael ↔ Tashtego, ΔE 6.8 |
+| tritanopia    | Pip ↔ Daggoo, ΔE 13.3       | Ahab ↔ Pip, ΔE 10.2       |
 
-**Usage guidance:** do not rely on colour alone to distinguish *Ahab/Daggoo*,
-*Pip/Stubb*, *Ahab/Pip*, *Ahab/Stubb*, or *Queequeg/Tashtego*. Pair with
-icon, shape, weight, or position where colour-blind-safe distinction
-matters (error states, diff gutters, warning badges).
+The deuteranopia floor is set by **Ishmael ↔ Tashtego** because green
+collapses to neutral grey under deutan and the two accents sit at similar
+L\*. This is unavoidable for an 8-hue palette that includes both a green
+and a low-chroma grey, so it is documented rather than designed away —
+in practice, comments (Ishmael) and strings (Tashtego) are rarely
+adjacent and rarely encode meaning by colour alone.
+
+**Usage guidance:** do not rely on colour alone to distinguish *Ishmael*
+from *Tashtego* under deuteranopia. Pair with icon, weight, or italics
+(the default theme already italicises comments). Every other pair clears
+ΔE ≥ 10 across all three simulations.
 
 Run the check yourself:
 

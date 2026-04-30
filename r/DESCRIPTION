@@ -1,7 +1,7 @@
 Package: pequod
 Type: Package
 Title: Colour Palette for Reading and Code, Inspired by Moby-Dick
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: person("Tiago", "Jacinto",
                   email = "tiagojacinto@med.up.pt",
                   role = c("aut", "cre"),

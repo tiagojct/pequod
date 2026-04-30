@@ -1,4 +1,4 @@
-# Generated from ../pequod.json (v0.1.0-alpha).
+# Generated from ../pequod.json (v0.2.0-alpha).
 # Re-generate with: Rscript data-raw/generate_palettes.R
 
 #' Pequod Log base scale
@@ -11,18 +11,18 @@
 #' @format A named character vector of length 12 (hex codes).
 #' @export
 pequod_log <- c(
-  "Log 50"  = "#FBFAF5",
-  "Log 100" = "#F8F4EB",
-  "Log 150" = "#ECE5D3",
-  "Log 200" = "#DFD3B8",
-  "Log 300" = "#C4A57B",
-  "Log 400" = "#A8865E",
-  "Log 500" = "#8B7B6B",
-  "Log 600" = "#6E5F52",
-  "Log 700" = "#527275",
-  "Log 800" = "#2C3E50",
-  "Log 900" = "#1C2936",
-  "Log 950" = "#13181F"
+  "Log 50"  = "#F7F3EE",
+  "Log 100" = "#EAE1D7",
+  "Log 150" = "#DBC9B6",
+  "Log 200" = "#CFAD8E",
+  "Log 300" = "#BD8C68",
+  "Log 400" = "#A16E50",
+  "Log 500" = "#835A49",
+  "Log 600" = "#335260",
+  "Log 700" = "#163F54",
+  "Log 800" = "#0D2F42",
+  "Log 900" = "#0C222F",
+  "Log 950" = "#0B1720"
 )
 
 #' Pequod crew accents — light variants
@@ -33,14 +33,14 @@ pequod_log <- c(
 #' @format A named character vector of length 8.
 #' @export
 pequod_crew_light <- c(
-  "Ahab"     = "#B5534A",
-  "Starbuck" = "#527C98",
-  "Queequeg" = "#4A4E8C",
-  "Pip"      = "#A8812B",
-  "Ishmael"  = "#6E6E6B",
-  "Stubb"    = "#B5683A",
-  "Tashtego" = "#507352",
-  "Daggoo"   = "#7A5440"
+  "Ahab"     = "#A83732",
+  "Starbuck" = "#0082B1",
+  "Queequeg" = "#253E82",
+  "Pip"      = "#6A4A00",
+  "Ishmael"  = "#76716B",
+  "Stubb"    = "#CA6435",
+  "Tashtego" = "#177C55",
+  "Daggoo"   = "#552823"
 )
 
 #' Pequod crew accents — dark variants
@@ -50,14 +50,14 @@ pequod_crew_light <- c(
 #' @format A named character vector of length 8.
 #' @export
 pequod_crew_dark <- c(
-  "Ahab"     = "#E07A72",
-  "Starbuck" = "#7FA8C3",
-  "Queequeg" = "#8A8ECE",
-  "Pip"      = "#D9B461",
-  "Ishmael"  = "#A5A5A0",
-  "Stubb"    = "#E29B6E",
-  "Tashtego" = "#8AB08C",
-  "Daggoo"   = "#AF8870"
+  "Ahab"     = "#E3877C",
+  "Starbuck" = "#A6DFFF",
+  "Queequeg" = "#838CCF",
+  "Pip"      = "#DEC577",
+  "Ishmael"  = "#BFBBB6",
+  "Stubb"    = "#FFD9BB",
+  "Tashtego" = "#82C4A2",
+  "Daggoo"   = "#A17069"
 )
 
 #' Pequod crew metadata

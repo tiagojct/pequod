@@ -1,33 +1,33 @@
 # Pequod — Ghostty colour scheme (dark)
 # https://tiagojct.eu/projects/pequod/
 #
-# Background: Log 950 (#13181F).  Foreground: Log 100 (#F8F4EB).
+# Background: Log 950 (#0B1720).  Foreground: Log 100 (#EAE1D7).
 # Drop into ~/.config/ghostty/themes/Pequod, then add `theme = Pequod`
 # to your ~/.config/ghostty/config.
 
-background = 13181F
-foreground = F8F4EB
-cursor-color = C4A57B
-cursor-text = 13181F
-selection-background = 2C3E50
-selection-foreground = F8F4EB
+background = 0B1720
+foreground = EAE1D7
+cursor-color = BD8C68
+cursor-text = 0B1720
+selection-background = 0D2F42
+selection-foreground = EAE1D7
 
 # ANSI 0-7
-palette = 0=1C2936
-palette = 1=E07A72
-palette = 2=8AB08C
-palette = 3=D9B461
-palette = 4=7FA8C3
-palette = 5=8A8ECE
+palette = 0=0C222F
+palette = 1=E3877C
+palette = 2=82C4A2
+palette = 3=DEC577
+palette = 4=A6DFFF
+palette = 5=838CCF
 palette = 6=9DC2C5
-palette = 7=F8F4EB
+palette = 7=EAE1D7
 
 # ANSI 8-15 (bright)
-palette = 8=6E5F52
+palette = 8=335260
 palette = 9=E99C93
 palette = 10=AFCCA6
 palette = 11=E8CB8C
 palette = 12=A0C2D4
 palette = 13=AAADDA
 palette = 14=BCD9DB
-palette = 15=FBFAF5
+palette = 15=F7F3EE
