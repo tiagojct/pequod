@@ -39,7 +39,7 @@ def palette(
     >>> palette("log")[:3]
     ['#F7F3EE', '#EAE1D7', '#DBC9B6']
     >>> palette("crew", n=3)
-    ['#A83732', '#0082B1', '#253E82']
+    ['#931432', '#006A98', '#253E82']
     >>> len(palette("log-cool", n=100, kind="continuous"))
     100
     """

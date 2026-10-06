@@ -67,7 +67,7 @@ def test_palette_default_name_is_log():
 
 
 def test_palette_n_truncates_for_discrete():
-    assert palette("crew", n=3) == ["#A83732", "#0082B1", "#253E82"]
+    assert palette("crew", n=3) == ["#931432", "#006A98", "#253E82"]
 
 
 def test_palette_continuous_interpolates():

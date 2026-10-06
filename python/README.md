@@ -1,11 +1,15 @@
 # pequod · Python package
 
+Pequod is now part of [Ensigns](https://ensigns.tiagojacinto.eu), a set of ten
+colour families ([source](https://github.com/tiagojct/ensigns)). Version 0.3.0
+is the last release of this package.
+
 The Pequod palette for Python: the full Log base scale, eight crew
 accents (light and dark variants), and matplotlib helpers.
 
 The narrative, design rationale, and full accessibility analysis live
 in the [repository README](https://github.com/tiagojct/pequod/blob/main/README.md)
-and on the [project website](https://tiagojct.eu/projects/pequod/).
+and on the [project website](https://ensigns.tiagojacinto.eu/pequod/).
 
 ## Install
 

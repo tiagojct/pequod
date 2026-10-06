@@ -9,7 +9,7 @@ Quick start
 >>> palette("log")[:3]
 ['#F7F3EE', '#EAE1D7', '#DBC9B6']
 >>> palette("crew", n=3)
-['#A83732', '#0082B1', '#253E82']
+['#931432', '#006A98', '#253E82']
 
 Matplotlib
 ----------
@@ -18,13 +18,15 @@ Matplotlib
 >>> plt.imshow(data, cmap="pequod_log")        # doctest: +SKIP
 
 The narrative, design rationale, and full accessibility analysis live
-at https://tiagojct.eu/projects/pequod/. The canonical source is at
-https://github.com/tiagojct/pequod.
+at https://ensigns.tiagojacinto.eu/pequod/. This package is built from
+https://github.com/tiagojct/pequod. Pequod continues in Ensigns
+(https://github.com/tiagojct/ensigns); 0.3.0 is the last release of this
+package.
 """
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.3.0"
 
 from ._data import (
     LOG,
