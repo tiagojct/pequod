@@ -1,3 +1,61 @@
+# CRAN submission — pequod 0.3.0
+
+## Update — 2026-10-07
+
+This is a minor-version update to `pequod` 0.2.0 (CRAN, 2026-05-01). It is the
+last release I plan for this package, except fixes. Pequod is now part of
+Ensigns (<https://ensigns.tiagojacinto.eu>). I would like `pequod` to stay on
+CRAN so that existing users keep a working package.
+
+The changes:
+
+1. Six colour values changed: Ahab, Starbuck, Ishmael, Stubb and Tashtego in
+   `pequod_crew_light`, and Daggoo in `pequod_crew_dark`. In 0.2.0 five crew
+   colours did not reach a WCAG contrast ratio of 4.5:1 as text on their page
+   colour. The new values do. They reach users through `pequod_crew_light`,
+   `pequod_crew_dark`, `pequod_crew`, `palette_pequod()` and the discrete
+   scales. The Log scale and the other ten crew colours are unchanged.
+2. The `URL` field, the `Description` text and the help pages point to the new
+   project page. The old project link returns 404.
+3. The `Description` field and the README point to Ensigns and say that 0.3.0
+   is the last release.
+4. `NEWS.md` is new.
+
+No API changes. All exported functions keep their signatures. Only the
+returned hex values have changed.
+
+The full hex map is in the upstream `CHANGELOG.md`
+(<https://github.com/tiagojct/pequod/blob/main/CHANGELOG.md>).
+
+There are no reverse dependencies on CRAN (checked against the CRAN package
+index on 2026-10-07).
+
+## R CMD check results — pequod 0.3.0
+
+Local check:
+
+* `R CMD check --as-cran pequod_0.3.0.tar.gz`
+* 0 errors, 0 warnings, 1 NOTE.
+
+### NOTE and explanation
+
+1. **HTML Tidy validation skipped.** My local `tidy` binary predates the
+   version CRAN expects. The same environmental note accompanied 0.2.0.
+
+## Test environments
+
+* Local: macOS Sequoia 15.8, R 4.6.1 (aarch64-apple-darwin23).
+
+## Reverse dependencies
+
+None on CRAN.
+
+---
+
+Earlier submissions follow.
+
+---
+
 # CRAN submission — pequod 0.2.0
 
 ## Update — 2026-04-30

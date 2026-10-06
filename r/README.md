@@ -1,12 +1,16 @@
 # pequod · R package
 
+Pequod is now part of [Ensigns](https://ensigns.tiagojacinto.eu), a set of ten
+colour families ([source](https://github.com/tiagojct/ensigns)). Version 0.3.0
+is the last release of this package.
+
 The Pequod palette packaged for R. Provides the full Log base scale,
 the eight crew accents (light and dark variants), and ggplot2 scales
 for both discrete and continuous mapping.
 
 The narrative, design rationale, and full accessibility analysis live
 in the [repository README](https://github.com/tiagojct/pequod/blob/main/README.md)
-and on the [project website](https://tiagojct.eu/projects/pequod/).
+and on the [project website](https://ensigns.tiagojacinto.eu/pequod/).
 
 ## Install
 

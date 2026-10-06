@@ -7,10 +7,12 @@
 #' (`scale_color_pequod_d()`, `scale_fill_pequod_d()`,
 #' `scale_color_pequod_c()`, `scale_fill_pequod_c()`).
 #'
-#' See <https://tiagojct.eu/projects/pequod/> for the full palette
+#' See <https://ensigns.tiagojacinto.eu/pequod/> for the full palette
 #' narrative, WCAG contrast ratios, and colour-vision-deficiency
-#' analysis. The upstream source of truth is
-#' <https://github.com/tiagojct/pequod>.
+#' analysis. The package is built from
+#' <https://github.com/tiagojct/pequod>. Pequod continues in Ensigns
+#' (<https://github.com/tiagojct/ensigns>); version 0.3.0 is the last
+#' release of this package.
 #'
 #' @keywords internal
 "_PACKAGE"

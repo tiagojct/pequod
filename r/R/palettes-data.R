@@ -1,4 +1,4 @@
-# Generated from ../pequod.json (v0.2.0-alpha).
+# Generated from ../pequod.json (v0.3.0).
 # Re-generate with: Rscript data-raw/generate_palettes.R
 
 #' Pequod Log base scale
@@ -33,13 +33,13 @@ pequod_log <- c(
 #' @format A named character vector of length 8.
 #' @export
 pequod_crew_light <- c(
-  "Ahab"     = "#A83732",
-  "Starbuck" = "#0082B1",
+  "Ahab"     = "#931432",
+  "Starbuck" = "#006A98",
   "Queequeg" = "#253E82",
   "Pip"      = "#6A4A00",
-  "Ishmael"  = "#76716B",
-  "Stubb"    = "#CA6435",
-  "Tashtego" = "#177C55",
+  "Ishmael"  = "#6A6164",
+  "Stubb"    = "#AA430B",
+  "Tashtego" = "#06724B",
   "Daggoo"   = "#552823"
 )
 
@@ -57,7 +57,7 @@ pequod_crew_dark <- c(
   "Ishmael"  = "#BFBBB6",
   "Stubb"    = "#FFD9BB",
   "Tashtego" = "#82C4A2",
-  "Daggoo"   = "#A17069"
+  "Daggoo"   = "#A7766F"
 )
 
 #' Pequod crew metadata

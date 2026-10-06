@@ -1,7 +1,7 @@
 Package: pequod
 Type: Package
 Title: Colour Palette for Reading and Code, Inspired by Moby-Dick
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: person("Tiago", "Jacinto",
                   email = "tiagojacinto@med.up.pt",
                   role = c("aut", "cre"),
@@ -13,9 +13,12 @@ Description: The Pequod colour palette, named after the whaler in
     for discrete and continuous mapping. Designed for long-form
     reading and code, with low saturation and a consistent earth-
     pigment register. Full design rationale and accessibility notes
-    at <https://tiagojct.eu/projects/pequod/>.
+    at <https://ensigns.tiagojacinto.eu/pequod/>. Pequod is now part of
+    Ensigns, a set of ten colour families
+    (<https://ensigns.tiagojacinto.eu>, <https://github.com/tiagojct/ensigns>).
+    Version 0.3.0 is the last release of this package.
 License: MIT + file LICENSE
-URL: https://tiagojct.eu/projects/pequod/,
+URL: https://ensigns.tiagojacinto.eu/pequod/,
     https://github.com/tiagojct/pequod
 BugReports: https://github.com/tiagojct/pequod/issues
 Encoding: UTF-8
