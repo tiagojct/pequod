@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.3.0] — 2026-10-07
+
+The last release of this extension. Pequod is now part of
+[Ensigns](https://ensigns.tiagojacinto.eu), a set of ten colour families. The
+source is at <https://github.com/tiagojct/ensigns>.
+
+### Changed
+
+- Six crew colours corrected so that every crew colour reaches 4.5 : 1 as
+  text on its page. The light theme changes where it draws Ahab, Starbuck,
+  Ishmael, Stubb and Tashtego, which includes keywords, functions, comments,
+  constants, strings, errors and the terminal red, green and blue. The dark
+  theme changes where it draws Daggoo, which is parameters and properties, and
+  the status bar while debugging, which is the light Ahab colour. The full
+  account, with contrast figures, is in the
+  [palette changelog](https://github.com/tiagojct/pequod/blob/main/CHANGELOG.md#030--2026-10-07).
+
+| Crew | Mode | 0.2.0 | 0.3.0 |
+|---|---|---|---|
+| Ahab | light | `#A83732` | `#931432` |
+| Starbuck | light | `#0082B1` | `#006A98` |
+| Ishmael | light | `#76716B` | `#6A6164` |
+| Stubb | light | `#CA6435` | `#AA430B` |
+| Tashtego | light | `#177C55` | `#06724B` |
+| Daggoo | dark | `#A17069` | `#A7766F` |
+
+- The homepage link points to <https://ensigns.tiagojacinto.eu/pequod/>. The
+  old link returned 404.
+- The README contrast figures are corrected: body text is 12.7 : 1 on the
+  light theme and 14.0 : 1 on the dark theme. The 0.2.0 README quoted 10.5 : 1
+  and 16.2 : 1, which were 0.1.0 figures.
+
+### Notes for upgraders
+
+VS Code installs the update on its own. If you copied a 0.2.0 crew hex value
+into `workbench.colorCustomizations`, use the values in the table above.
+
 ## [0.2.0] — 2026-04-30
 
 A perceptual-correctness rewrite of every token in the theme. The
