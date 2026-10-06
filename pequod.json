@@ -1,10 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "Pequod",
-  "version": "0.2.0-alpha",
+  "version": "0.3.0",
   "description": "A pigment-inspired palette for reading and code, rooted in Moby-Dick. Warm paper on one end, deep ink on the other, with eight accent hues named after the crew of the Pequod.",
   "author": "Tiago Jacinto",
-  "homepage": "https://tiagojct.eu/projects/pequod/",
+  "homepage": "https://ensigns.tiagojacinto.eu/pequod/",
   "license": {
     "palette": "CC-BY-4.0",
     "code": "MIT"
@@ -26,14 +26,14 @@
   },
 
   "accents": {
-    "ahab":    { "light": "#A83732", "dark": "#E3877C", "role": "red",    "note": "Obsession, fire, the wound." },
-    "starbuck":{ "light": "#0082B1", "dark": "#A6DFFF", "role": "blue",   "note": "The steady mate; sea and storm." },
+    "ahab":    { "light": "#931432", "dark": "#E3877C", "role": "red",    "note": "Obsession, fire, the wound." },
+    "starbuck":{ "light": "#006A98", "dark": "#A6DFFF", "role": "blue",   "note": "The steady mate; sea and storm." },
     "queequeg":{ "light": "#253E82", "dark": "#838CCF", "role": "indigo", "note": "Tattoo ink; loyalty and strangeness." },
     "pip":     { "light": "#6A4A00", "dark": "#DEC577", "role": "yellow", "note": "Child of the sun; the lost soul." },
-    "ishmael": { "light": "#76716B", "dark": "#BFBBB6", "role": "grey",   "note": "The narrator; observer, transparent." },
-    "stubb":   { "light": "#CA6435", "dark": "#FFD9BB", "role": "orange", "note": "The pipe-smoking second mate; amber and flame." },
-    "tashtego":{ "light": "#177C55", "dark": "#82C4A2", "role": "green",  "note": "Gay Head harpooneer; woods and moss." },
-    "daggoo":  { "light": "#552823", "dark": "#A17069", "role": "brown",  "note": "African-born harpooneer; earth and mahogany." }
+    "ishmael": { "light": "#6A6164", "dark": "#BFBBB6", "role": "grey",   "note": "The narrator; observer, transparent." },
+    "stubb":   { "light": "#AA430B", "dark": "#FFD9BB", "role": "orange", "note": "The pipe-smoking second mate; amber and flame." },
+    "tashtego":{ "light": "#06724B", "dark": "#82C4A2", "role": "green",  "note": "Gay Head harpooneer; woods and moss." },
+    "daggoo":  { "light": "#552823", "dark": "#A7766F", "role": "brown",  "note": "African-born harpooneer; earth and mahogany." }
   },
 
   "roles": {

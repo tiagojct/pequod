@@ -43,14 +43,14 @@
 )
 
 #let crew = (
-  (name: "Ahab",     role: "red",    light: "#A83732", dark: "#E3877C", note: "errors, alarms, destructive actions"),
-  (name: "Starbuck", role: "blue",   light: "#0082B1", dark: "#A6DFFF", note: "functions, primary actions, hyperlinks"),
+  (name: "Ahab",     role: "red",    light: "#931432", dark: "#E3877C", note: "errors, alarms, destructive actions"),
+  (name: "Starbuck", role: "blue",   light: "#006A98", dark: "#A6DFFF", note: "functions, primary actions, hyperlinks"),
   (name: "Queequeg", role: "indigo", light: "#253E82", dark: "#838CCF", note: "types, classes, interfaces"),
   (name: "Pip",      role: "yellow", light: "#6A4A00", dark: "#DEC577", note: "numbers, literals, highlights"),
-  (name: "Ishmael",  role: "grey",   light: "#76716B", dark: "#BFBBB6", note: "comments, punctuation, muted text"),
-  (name: "Stubb",    role: "orange", light: "#CA6435", dark: "#FFD9BB", note: "constants, warnings, changes"),
-  (name: "Tashtego", role: "green",  light: "#177C55", dark: "#82C4A2", note: "strings, success, additions"),
-  (name: "Daggoo",   role: "brown",  light: "#552823", dark: "#A17069", note: "variables, references, identifiers"),
+  (name: "Ishmael",  role: "grey",   light: "#6A6164", dark: "#BFBBB6", note: "comments, punctuation, muted text"),
+  (name: "Stubb",    role: "orange", light: "#AA430B", dark: "#FFD9BB", note: "constants, warnings, changes"),
+  (name: "Tashtego", role: "green",  light: "#06724B", dark: "#82C4A2", note: "strings, success, additions"),
+  (name: "Daggoo",   role: "brown",  light: "#552823", dark: "#A7766F", note: "variables, references, identifiers"),
 )
 
 
@@ -115,8 +115,8 @@
   ),
   stack(
     spacing: 0.25em,
-    text(size: 8pt, fill: rgb("#163F54"), font: "JetBrains Mono")[v0.2.0-alpha],
-    text(size: 8pt, fill: rgb("#335260"))[tiagojct.eu/projects/pequod/],
+    text(size: 8pt, fill: rgb("#163F54"), font: "JetBrains Mono")[v0.3.0],
+    text(size: 8pt, fill: rgb("#335260"))[ensigns.tiagojacinto.eu/pequod/],
   ),
 )
 
@@ -188,7 +188,7 @@
 #let ty(t)   = text(fill: rgb("#838CCF"))[#t]              // type — Queequeg
 #let num(t)  = text(fill: rgb("#DEC577"))[#t]              // number — Pip
 #let str(t)  = text(fill: rgb("#82C4A2"))[#t]              // string — Tashtego
-#let prop(t) = text(fill: rgb("#A17069"))[#t]              // parameter/property — Daggoo
+#let prop(t) = text(fill: rgb("#A7766F"))[#t]              // parameter/property — Daggoo
 #let cmt(t)  = text(fill: rgb("#BFBBB6"), style: "italic")[#t]  // comment — Ishmael
 #let pun(t)  = text(fill: rgb("#BFBBB6"))[#t]              // operator/punctuation
 #let var(t)  = text(fill: rgb("#EAE1D7"))[#t]              // plain variable
@@ -223,6 +223,6 @@
 
 #align(center)[
   #text(size: 7pt, fill: rgb("#835A49"), font: "JetBrains Mono")[
-    PEQUOD  ·  v0.2.0-alpha  ·  CC-BY-4.0 (palette) + MIT (code)  ·  github.com/tiagojct/pequod
+    PEQUOD  ·  v0.3.0  ·  CC-BY-4.0 (palette) + MIT (code)  ·  github.com/tiagojct/pequod
   ]
 ]

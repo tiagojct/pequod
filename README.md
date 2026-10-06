@@ -23,19 +23,23 @@ after the crew of the Pequod.
   for glance-ability. Saturation stays low, backgrounds stay warm, accents
   stay in the same pigment register.
 - **Accessibility:** every body-text pair clears WCAG-AA (4.5:1) on the
-  reference surface; dark-mode accents clear 4.5:1 comfortably. Colour-
-  vision-deficiency collapses are documented, not hidden — see below.
+  reference surface, and every crew accent clears 4.5:1 on its page in both
+  modes. Colour-vision-deficiency collapses are documented, not hidden — see
+  below.
 - **Semantics, not decoration:** each accent has a role. Using the palette
   should feel earned; the colour choice should tell you something.
 
 The full narrative and design rationale live at
-<https://tiagojct.eu/projects/pequod/>. This repository is the canonical
-source of truth for the tokens and the built themes.
+<https://ensigns.tiagojacinto.eu/pequod/>. From 0.3.0 the source of truth for
+the tokens is the Ensigns repository, <https://github.com/tiagojct/ensigns>.
 
 ## Status
 
-**Alpha (0.1.0).** Tokens are stable enough to run a website on them and
-to publish across every ecosystem the palette ships into:
+Version 0.3.0 is the last release of the Pequod packages. Pequod now lives
+in [Ensigns](https://github.com/tiagojct/ensigns), a set of ten colour
+families built from one token file each: <https://ensigns.tiagojacinto.eu>.
+This repository publishes nothing more under the old package names, except
+fixes. The surfaces below are at 0.3.0:
 
 | Surface | Where | Status |
 |---|---|---|
@@ -47,9 +51,8 @@ to publish across every ecosystem the palette ships into:
 | R package | [CRAN](https://CRAN.R-project.org/package=pequod) | `install.packages("pequod")` |
 | Specimen PDF | `specimen/specimen.pdf` | regenerated from tokens |
 
-Hex values may still shift by a point or two during the alpha — palette
-testing continues against more code and long-form prose. Breaking
-changes before 1.0 will be called out in `CHANGELOG.md`.
+0.3.0 changes six crew colours so that every crew colour reaches 4.5:1 as
+text on its page. `CHANGELOG.md` lists each value.
 
 ## Showcase
 
@@ -127,7 +130,7 @@ in any of three ways:
    Palette**, install. Or use [the listing page](https://marketplace.visualstudio.com/items?itemName=tiagojct.pequod-color-theme).
    For VSCodium / Cursor / Gitpod, use the [Open VSX listing](https://open-vsx.org/extension/tiagojct/pequod-color-theme) instead.
 2. **`.vsix` file** — build with `make vsix`, then
-   `code --install-extension vscode/pequod-color-theme-0.1.0.vsix`.
+   `code --install-extension vscode/pequod-color-theme-0.3.0.vsix`.
 3. **From source (no marketplace)** — copy the [`vscode/`](vscode/)
    folder to `~/.vscode/extensions/pequod-color-theme/`. VS Code will
    pick it up on next launch.
@@ -268,17 +271,20 @@ Body-text contrast on the reference surfaces:
 | Pair | Use | Ratio |
 |---|---|---|
 | Log 800 on Log 100 | light body | 10.8 : 1 |
-| Log 700 on Log 50 | light link | 8.5 : 1 |
+| Log 700 on Log 50 | light link | 10.1 : 1 |
 | Log 400 on Log 50 | muted / large text | 3.9 : 1 |
 | Log 100 on Log 950 | dark body | 14.0 : 1 |
-| Accent-light on Log 100 | UI accents | 3.0 – 9.5 : 1 |
-| Accent-dark on Log 950 | dark-mode accents | 3.6 – 13.6 : 1 |
+| Accent-light on Log 100 | UI accents | 4.6 – 9.5 : 1 |
+| Accent-dark on Log 950 | dark-mode accents | 4.7 – 13.7 : 1 |
 
-In v0.2.0-alpha every accent clears the AA-large (3 : 1) bar on its target
-surface — none of the bright-on-light "fill-only" cases from v0.1 remain.
-Light-mode body-text candidates (≥ 4.5 : 1 on Log 100): **Daggoo**,
-**Queequeg**, **Pip**, **Ahab**. Dark-mode body-text candidates (≥ 4.5 : 1
-on Log 950): every accent except **Daggoo** (3.6, AA-large only).
+In 0.3.0 every crew accent clears 4.5 : 1 (WCAG AA for body text) on its
+target surface: the eight light variants on Log 100 and the eight dark
+variants on Log 950. In 0.2.0 five did not: Starbuck, Stubb, Tashtego and
+Ishmael (light) and Daggoo (dark). The editor themes draw the crew on the
+editor background (Log 50 in the light theme, Log 950 in the dark theme). The
+lowest crew ratios in the dark theme are 4.72 : 1 on that background, 4.47 : 1
+on the current-line highlight and 3.64 : 1 on the selection, all Daggoo. In
+the light theme they are 5.41, 4.51 and 3.99 : 1.
 
 ### Colour vision deficiency
 
@@ -287,13 +293,20 @@ protanopia, deuteranopia, and tritanopia using the Viénot–Brettel–Mollon
 (1999) model, and reports pairwise ΔE*~ab~ (CIE76, Lab D65) between
 simulated accents.
 
-In v0.2.0-alpha the worst-case pair under each simulation:
+In 0.3.0 the worst-case pair under each simulation:
 
 | | light variants | dark variants |
 |---|---|---|
-| protanopia    | Ishmael ↔ Tashtego, ΔE 15.1 | Stubb ↔ Tashtego, ΔE 11.8 |
-| deuteranopia  | Ishmael ↔ Tashtego, ΔE 8.0  | Ishmael ↔ Tashtego, ΔE 6.8 |
-| tritanopia    | Pip ↔ Daggoo, ΔE 13.3       | Ahab ↔ Pip, ΔE 10.2       |
+| protanopia    | Pip ↔ Stubb, ΔE 4.0         | Ahab ↔ Daggoo, ΔE 10.5    |
+| deuteranopia  | Ishmael ↔ Tashtego, ΔE 12.2 | Ishmael ↔ Tashtego, ΔE 6.8 |
+| tritanopia    | Ahab ↔ Pip, ΔE 8.4          | Ahab ↔ Pip, ΔE 10.2       |
+
+The 0.3.0 corrections darkened five light accents to reach 4.5 : 1 on paper.
+That brought some pairs closer in lightness. Four pairs now fall below ΔE 10
+under one simulation: Pip and Stubb (light, protanopia, 4.0), Ahab and Daggoo
+(light, protanopia, 6.7), Ahab and Pip (light, tritanopia, 8.4) and Ishmael
+and Tashtego (dark, deuteranopia, 6.8). In 0.2.0 two pairs fell below 10:
+Ishmael and Tashtego under deuteranopia (8.0 light, 6.8 dark).
 
 The deuteranopia floor is set by **Ishmael ↔ Tashtego** because green
 collapses to neutral grey under deutan and the two accents sit at similar
@@ -302,10 +315,12 @@ and a low-chroma grey, so it is documented rather than designed away —
 in practice, comments (Ishmael) and strings (Tashtego) are rarely
 adjacent and rarely encode meaning by colour alone.
 
-**Usage guidance:** do not rely on colour alone to distinguish *Ishmael*
-from *Tashtego* under deuteranopia. Pair with icon, weight, or italics
-(the default theme already italicises comments). Every other pair clears
-ΔE ≥ 10 across all three simulations.
+**Usage guidance:** do not rely on colour alone to tell apart the four pairs
+above under the simulation named. Pair colour with icon, weight, italics or
+position (the default theme already italicises comments). Every other pair
+clears ΔE ≥ 10 across all three simulations. Ensigns uses a different
+simulation (Machado, Oliveira and Fernandes, 2009) and measures distance in
+OKLab, so its figures differ from these.
 
 Run the check yourself:
 
@@ -339,19 +354,10 @@ if they are not already present.
 
 ## What comes next
 
-- **Generators for the editor and terminal themes**, so the
-  hand-maintained files in `themes/` and `themes/terminals/`
-  regenerate from `pequod.json` the same way the R, Python, and
-  specimen targets already do.
-- **Light presets** for the terminals (currently dark only) and for
-  iTerm2 specifically.
-- **Vim / Neovim colourscheme** using [Lush](https://github.com/rktjmp/lush.nvim).
-- **Tailwind v4 plugin** as a first-class plugin once Tailwind v4's
-  plugin API stabilises (the current package works in v4 via
-  `@theme` but isn't formally a v4 plugin yet).
-- **Sublime Text, Helix, Emacs** — lower priority.
-
-Contributions to any of these are welcome.
+Nothing in this repository. Ensigns has generators for the editor and
+terminal themes, light terminal presets, a Neovim colourscheme and a Tailwind
+CSS 4 stylesheet for Pequod: <https://github.com/tiagojct/ensigns>. Sublime
+Text, Helix and Emacs themes were not started.
 
 ## Inspirations and credits
 

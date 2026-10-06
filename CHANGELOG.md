@@ -6,6 +6,95 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html),
 with the understanding that versions below 1.0 are alpha and breaking
 changes may still occur between 0.x releases.
 
+## [0.3.0] — 2026-10-07
+
+The last release of the Pequod packages. Pequod continues as a family in
+Ensigns: <https://ensigns.tiagojacinto.eu>, with the source at
+<https://github.com/tiagojct/ensigns>. This release takes the corrected crew
+colours from Ensigns into `pequod.json`, the editor themes, the specimen and the
+R, Python, Tailwind and VS Code packages. It also replaces the project link,
+which returned 404 on all five registry listings.
+
+### Changed (palette tokens)
+
+- Six crew colours corrected. Five crew colours failed WCAG AA (4.5 : 1) as
+  text in 0.2.0: Starbuck, Stubb, Tashtego and Ishmael (light variants) and
+  Daggoo (dark variant). Ahab passed, but it moved with them. Stubb had to
+  darken, and with Ahab held fixed the two would have sat too close. Every new
+  value reaches 4.5 : 1 on the page (Log 100 for the light variants, Log 950
+  for the dark variants) and on the editor background (Log 50 in the light
+  theme, Log 950 in the dark theme). Contrast is the WCAG 2 ratio. On the
+  current-line highlight the lowest ratios are 4.51 in the light theme and 4.47
+  in the dark theme (Daggoo). Ensigns models that highlight at 50 per cent
+  opacity and gets 4.51 for Daggoo. The dark theme writes it as `#0C222F80`,
+  which is 50.2 per cent and gives 4.47. On the selection the lowest ratios are
+  3.99 and 3.64. The values are the Pequod 0.3.0 values in Ensigns.
+
+  | Crew | Mode | 0.2.0 | 0.3.0 | On the page, before and after | On the editor, before and after |
+  |---|---|---|---|---|---|
+  | Ahab | light | `#A83732` | `#931432` | 4.99 to 6.81 | 5.84 to 7.96 |
+  | Starbuck | light | `#0082B1` | `#006A98` | 3.37 to 4.62 | 3.94 to 5.41 |
+  | Ishmael | light | `#76716B` | `#6A6164` | 3.74 to 4.63 | 4.38 to 5.42 |
+  | Stubb | light | `#CA6435` | `#AA430B` | 3.02 to 4.62 | 3.53 to 5.41 |
+  | Tashtego | light | `#177C55` | `#06724B` | 4.01 to 4.62 | 4.69 to 5.41 |
+  | Daggoo | dark | `#A17069` | `#A7766F` | 4.35 to 4.72 | 4.35 to 4.72 |
+
+  The Log scale, the other ten crew colours and the hand-tuned terminal and
+  editor colours are unchanged.
+
+### Changed (files and packages)
+
+- Every file that held one of the six old values now holds the new one: both
+  VS Code themes, both Zed themes, `pequod.json`, the specimen (source and PDF),
+  the R and Python palette data, the Tailwind preset and its test, and the
+  READMEs that list hex values. The iTerm2 preset and the six terminal presets
+  are dark only and use none of the six values, so only their header link
+  changes.
+- Zed, dark theme: `dim_red`, `dim_green` and `dim_blue` reuse the light
+  accents, so they follow the corrected values and are darker. Contrast on the
+  terminal background goes from 2.81 to 2.06, from 3.50 to 3.04 and from 4.17
+  to 3.04.
+- Every project link points to <https://ensigns.tiagojacinto.eu/pequod/>.
+- The R DESCRIPTION and the README of each package point to Ensigns and say
+  that 0.3.0 is the last release.
+- `pequod.json` is version 0.3.0. The "-alpha" suffix is gone. No registry
+  carried it.
+- The Python package carries the classifier `Development Status :: 7 - Inactive`.
+- The R package has a `NEWS.md`.
+
+### Fixed
+
+- `pequod.__version__` was 0.1.0 in the 0.2.0 source, while the package
+  version was 0.2.0. It now says 0.3.0.
+- The VS Code and Tailwind READMEs quoted 10.5 : 1 and 16.2 : 1 for body text.
+  Those were 0.1.0 figures. The figures are 12.7 : 1 (Log 800 on Log 50) and
+  14.0 : 1 (Log 100 on Log 950).
+- The root README quoted 8.5 : 1 for Log 700 on Log 50 (it is 10.1 : 1) and
+  3.6 to 13.6 : 1 for the dark accents (they were 4.35 to 13.73 : 1 in 0.2.0
+  and are 4.72 to 13.73 : 1 now). Its status line said 0.1.0 and the `.vsix`
+  file name in the install notes said 0.1.0.
+
+### Known limitations
+
+- The corrections darkened five light accents, which brought some pairs closer
+  in lightness. Measured with `make cvd`, four pairs fall below ΔE 10 under one
+  simulation: Pip and Stubb (light, protanopia, ΔE 4.0), Ahab and Daggoo
+  (light, protanopia, 6.7), Ahab and Pip (light, tritanopia, 8.4) and Ishmael
+  and Tashtego (dark, deuteranopia, 6.8). In 0.2.0 two pairs fell below 10:
+  Ishmael and Tashtego under deuteranopia (8.0 light, 6.8 dark). Pair colour
+  with icon, weight, italics or position where it matters. Ensigns uses a
+  different simulation and distance, so its figures differ from these.
+- `scripts/design_palette.py` records the 0.2.0 design. The six corrected
+  colours were chosen in Ensigns, so its `CREW_DESIGN` table no longer
+  reproduces `pequod.json` for them.
+
+### Notes for upgraders
+
+Anything that copied a 0.2.0 crew value by hex needs the six values in the
+table above. VS Code and Open VSX update the extension on their own. The light
+theme changes where it draws the five light colours. The dark theme changes
+where it draws parameters and properties, and the status bar while debugging.
+
 ## [0.2.0-alpha] — 2026-04-30
 
 A perceptual-correctness rewrite of the palette tokens. The Log

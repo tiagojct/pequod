@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
   Pequod — iTerm2 colour scheme
-  https://tiagojct.eu/projects/pequod/
+  https://ensigns.tiagojacinto.eu/pequod/
 
   Background: Log 950 (#0B1720).  Foreground: Log 100 (#EAE1D7).
   ANSI 0-7 mapped to Log + accent dark variants for legibility on Log 950.

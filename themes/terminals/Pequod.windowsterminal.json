@@ -1,6 +1,6 @@
 {
   "_comment_1": "Pequod — Windows Terminal colour scheme (dark)",
-  "_comment_2": "https://tiagojct.eu/projects/pequod/",
+  "_comment_2": "https://ensigns.tiagojacinto.eu/pequod/",
   "_comment_3": "Open Settings → JSON, paste this object into the schemes array,",
   "_comment_4": "then set defaults.colorScheme to \"Pequod\".",
 

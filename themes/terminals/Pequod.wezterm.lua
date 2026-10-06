@@ -1,5 +1,5 @@
 -- Pequod — WezTerm colour scheme (dark)
--- https://tiagojct.eu/projects/pequod/
+-- https://ensigns.tiagojacinto.eu/pequod/
 --
 -- Background: Log 950 (#0B1720).  Foreground: Log 100 (#EAE1D7).
 -- Save to ~/.config/wezterm/colors/Pequod.lua, then add to your

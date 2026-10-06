@@ -18,6 +18,12 @@ Design constraints:
               yellow=Pip, grey=Ishmael, orange=Stubb,
               green=Tashtego, brown=Daggoo  (roles fixed)
 
+Note (0.3.0): this script records the 0.2.0 design. The six crew colours
+corrected in 0.3.0 were chosen in Ensigns (scripts/design/pequod-corrections.ts
+in https://github.com/tiagojct/ensigns), so CREW_DESIGN below no longer
+reproduces pequod.json for Ahab, Starbuck, Ishmael, Stubb and Tashtego (light)
+and Daggoo (dark).
+
 Run:
     python3 scripts/design_palette.py
 """
