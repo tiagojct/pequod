@@ -51,6 +51,6 @@ test("specific anchor values match the canonical pequod.json", () => {
   assert.equal(pkg.log[100], "#EAE1D7");
   assert.equal(pkg.log[800], "#0D2F42");
   assert.equal(pkg.log[950], "#0B1720");
-  assert.equal(pkg.crew.ahab.light, "#A83732");
+  assert.equal(pkg.crew.ahab.light, "#931432");
   assert.equal(pkg.crew.starbuck.dark, "#A6DFFF");
 });

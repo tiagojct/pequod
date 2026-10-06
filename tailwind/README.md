@@ -1,5 +1,9 @@
 # pequod-tailwind
 
+Pequod is now part of [Ensigns](https://ensigns.tiagojacinto.eu), a set of ten
+colour families ([source](https://github.com/tiagojct/ensigns)). Version 0.3.0
+is the last release of this package.
+
 The Pequod palette for Tailwind CSS — the full Log base scale, eight
 crew accents (light + dark variants), all named after the crew of the
 whaler in *Moby-Dick*. Designed for long-form reading, not glance-
@@ -7,7 +11,7 @@ ability.
 
 The narrative, design rationale, and full accessibility analysis live
 in the [main repository](https://github.com/tiagojct/pequod) and on
-the [project website](https://tiagojct.eu/projects/pequod/).
+the [project website](https://ensigns.tiagojacinto.eu/pequod/).
 
 ## Install
 
@@ -64,7 +68,7 @@ Now you can write classes like:
   --color-log-50:  #F7F3EE;
   --color-log-100: #EAE1D7;
   /* ... etc; see `node_modules/pequod-tailwind/index.js` for all values */
-  --color-ahab:    #A83732;
+  --color-ahab:    #931432;
   --color-ahab-dark: #E3877C;
 }
 ```
@@ -111,16 +115,20 @@ variants are tuned for Log 950 ink and clear WCAG-AA on that surface.
 
 ## Accessibility
 
-- Body-text contrast on the light theme: **10.5 : 1** (Log 800 on
-  Log 50). On dark: **16.2 : 1** (Log 100 on Log 950).
-- All eight dark-mode crew accents clear WCAG-AA (4.5 : 1) on Log 950.
-- Five of eight light-mode crew accents clear AA-body on Log 100; the
-  other three (Pip, Stubb, Starbuck) sit between 3.3 and 4.1 — fine
-  for bold, large text, or UI elements where AA-large (3 : 1) applies.
+- Body-text contrast on the light theme: 12.7 : 1 (Log 800 on Log 50).
+  On dark: 14.0 : 1 (Log 100 on Log 950).
+- All eight dark-mode crew accents clear WCAG-AA (4.5 : 1) on Log 950,
+  from 4.7 to 13.7 : 1.
+- All eight light-mode crew accents clear WCAG-AA (4.5 : 1) on Log 100,
+  from 4.6 to 9.5 : 1. In 0.2.0, five crew accents (four light, one dark)
+  fell short.
 
 The full colour-vision-deficiency analysis (including which crew pairs
 collapse under each dichromacy) lives in the
 [main repository](https://github.com/tiagojct/pequod#colour-vision-deficiency).
+Four pairs fall below ΔE 10 under one simulation: Pip and Stubb, Ahab and
+Daggoo (light variants, protanopia), Ahab and Pip (light variants,
+tritanopia) and Ishmael and Tashtego (dark variants, deuteranopia).
 
 ## Beyond Tailwind
 
@@ -130,7 +138,7 @@ Pequod also ships as:
 - **Zed** theme family (dark + light, single file)
 - **iTerm2 / Ghostty / Alacritty / kitty / WezTerm / tmux / Windows Terminal** — terminal presets
 - **Python** package — `pip install pequod`
-- **R** package — install from GitHub or CRAN (review pending)
+- **R** package — install from CRAN or GitHub
 - **Printable A4 specimen** PDF generated from the canonical tokens
 
 All of these live at [github.com/tiagojct/pequod](https://github.com/tiagojct/pequod).
