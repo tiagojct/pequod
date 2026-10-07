@@ -1,3 +1,5 @@
+This repository is archived. Pequod is now a family in Ensigns: https://github.com/tiagojct/ensigns/tree/main/families/pequod. Ensigns has ten families and builds every file from one token file per family. Version 0.3.0 is the last release of the packages pequod (CRAN and PyPI), pequod-tailwind (npm) and the Pequod Palette extension. New work is at https://ensigns.tiagojacinto.eu/pequod/.
+
 # Pequod
 
 A pigment-inspired colour palette for reading and code, rooted in *Moby-Dick*.
